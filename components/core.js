@@ -685,7 +685,7 @@ export const Content = props => (
             <Heading level={3}>Credits</Heading>
             <Text small>
               Design and development by{" "}
-              <Anchor href="mailto:ateinum@gmail.com">
+              <Anchor href="https://github.com/alexanderte">
                 <Bold>Alexander Teinum</Bold>.
               </Anchor>
             </Text>
