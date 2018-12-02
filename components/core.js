@@ -102,6 +102,17 @@ export const SiteContainer = props => (
 
         <Head>
           <meta charSet="utf-8" />
+          <title>Dainty</title>
+          <meta
+            name="description"
+            content="Dainty is a color theme generator. Dainty Light and Dainty Dark are the default presets of Dainty. They’re balanced and refined color themes using carefully selected colors within the CIELAB color space."
+          />
+          <meta property="og:title" content="Dainty for Visual Studio" />
+          <meta
+            property="og:description"
+            content="Dainty is a color theme generator. Dainty Light and Dainty Dark are the default presets of Dainty. They’re balanced and refined color themes using carefully selected colors within the CIELAB color space."
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <style>{`
           @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i');
           @import url('https://overpass-30e2.kxcdn.com/overpass-mono.css');
