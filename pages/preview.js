@@ -7,11 +7,13 @@ import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import csharp from "react-syntax-highlighter/dist/cjs/languages/prism/csharp";
 import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
 import css from "react-syntax-highlighter/dist/cjs/languages/prism/css";
+import elixir from "react-syntax-highlighter/dist/cjs/languages/prism/elixir";
 
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("csharp", csharp);
 SyntaxHighlighter.registerLanguage("python", python);
 SyntaxHighlighter.registerLanguage("css", css);
+SyntaxHighlighter.registerLanguage("elixir", elixir);
 
 import { presets } from "dainty-shared/presets-web";
 import { examples } from "../examples";
