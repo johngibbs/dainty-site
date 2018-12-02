@@ -142,5 +142,30 @@ def add_slug_to_article_if_not_exists(sender, instance, *args, **kwargs):
                 slug = '-'.join(parts[:-1])
 
         instance.slug = slug + '-' + unique`
+  },
+  elixir: {
+    name: "Elixir",
+    code: `defmodule Euler14 do
+  def next(n) when rem(n, 2) == 0, do: div(n, 2)
+  def next(n), do: 3 * n + 1
+
+  def collatz(n), do: collatz(n, 1)
+  def collatz(1, steps), do: steps
+  def collatz(n, steps), do
+    collatz(next(n), steps + 1)
+  end
+
+  def solve() do
+    1..999999
+    |> Enum.reduce({0, 0}, fn(n, best = {index, steps}) ->
+      c = collatz(n)
+      if c > steps do
+        {n, c}
+      else
+        best
+      end
+    end)
+  end
+end`
   }
 };
