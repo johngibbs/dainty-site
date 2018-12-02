@@ -704,12 +704,12 @@ export const Content = props => (
             <Heading level={3}>Share</Heading>
             <List horizontal>
               <ListItem horizontal>
-                <Anchor href="https://twitter.com/home?status=Make%20your%20code%20look%20dainty.%20https%3A//dainty.site">
+                <Anchor href="https://twitter.com/home?status=Make%20your%20code%20look%20dainty.%20Use%20Dainty.%20😏%20https%3A//dainty.site">
                   <Small>Share on Twitter</Small>
                 </Anchor>
               </ListItem>
               <ListItem horizontal>
-                <Anchor href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//dainty.site&title=Make%20your%20code%20look%20dainty.&summary=&source=">
+                <Anchor href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//dainty.site&title=Make%20your%20code%20look%20dainty.%20Use%Dainty%20😏.&summary=&source=">
                   <Small>Share on LinkedIn</Small>
                 </Anchor>
               </ListItem>
