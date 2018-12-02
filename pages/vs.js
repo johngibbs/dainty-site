@@ -143,12 +143,13 @@ yarn
         get full control over the styling.
       </Text>
       <Text>
-        The palette palette is generated and processed using Culori. It is built
-        by first generating 41-indices scales for each hue. Blue is the primary
-        color, and there are four scales based on blue with different amounts of
-        chroma. Then colors are selected within the scales, preferring indicies
-        divisible by 4. The default colors are defined as LCh using math.
-        Overrides expressed as RGB hex colors are supported.
+        The palette palette is generated and processed using{" "}
+        <Anchor href="https://github.com/Evercoder/culori">Culori</Anchor>. It
+        is built by first generating 41-indices scales for each hue. Blue is the
+        primary color, and there are four scales based on blue with different
+        amounts of chroma. Then colors are selected within the scales,
+        preferring indicies divisible by 4. The default colors are defined as
+        LCh using math. Overrides expressed as RGB hex colors are supported.
       </Text>
     </Section>
     <Section>
@@ -157,26 +158,37 @@ yarn
         These are some extensions that improve the aestetics of Visual Studio:
       </Text>
       <List listStyle="–">
-        <ListItem listStyle="–">Indent Guides</ListItem>
+        <ListItem listStyle="–">
+          <Anchor href="https://marketplace.visualstudio.com/items?itemName=SteveDowerMSFT.IndentGuides">
+            Indent Guides
+          </Anchor>
+        </ListItem>
         <ListItem listStyle="–">Line Press</ListItem>
-        <ListItem listStyle="–">Better Comments</ListItem>
+        <ListItem listStyle="–">
+          <Anchor href="https://marketplace.visualstudio.com/items?itemName=OmarRwemi.BetterComments">
+            Better Comments
+          </Anchor>
+        </ListItem>
       </List>
       <Text>
         To make Indent Guides behave similar to Visual Studio Code, highlighting
-        has to be set to Current line. Dainty can be configured to include
+        has to be set to “Current line”. Dainty can be configured to include
         settings for Indent Guides which both sets this option and all
         indentation colors.
       </Text>
       <Text>
         Better Comments has default settings that lead to uneven spacing. This
-        can be fixed by setting Size Offset to 0 and Opacity to 1. Tokens can be
-        disabled by setting each value to a UUID.
+        can be fixed by setting Size Offset to <Code>0</Code> and Opacity to{" "}
+        <Code>1</Code>. Tokens can be disabled by setting each value to a UUID.
       </Text>
       <Text>
         I currently do not recommend using Line Press as its line spacings can
-        be unpredictable. If you are using WSL then you can use font-line to
-        modify the line spacing of fonts. For Fira Code, adding 50% seems like a
-        good place to start.
+        be unpredictable. If you are using WSL then you can use{" "}
+        <Anchor href="https://github.com/source-foundry/font-line">
+          <Code>font-line</Code>
+        </Anchor>{" "}
+        to modify the line spacing of fonts. For Fira Code, adding 50% seems
+        like a good place to start.
       </Text>
     </Section>
   </>
