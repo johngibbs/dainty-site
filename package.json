@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "@zeit/next-css": "1.0.1",
+    "change-case": "3.0.2",
+    "dainty-shared": "2.0.0-17f2341",
+    "express": "4.16.4",
+    "next": "7.0.2",
+    "rc-slider": "8.6.3",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-share": "2.4.0",
+    "react-syntax-highlighter": "10.1.1"
+  }
+}
