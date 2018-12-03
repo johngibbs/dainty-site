@@ -114,8 +114,8 @@ class Preview extends React.Component {
                     <Slider
                       step={0.5}
                       value={lightnessStart}
-                      min={-19.5}
-                      max={44.5}
+                      min={-32}
+                      max={32}
                       onChange={this.onLightessStartChange}
                     />
                   </div>
@@ -146,8 +146,8 @@ class Preview extends React.Component {
                     <Slider
                       step={0.5}
                       value={chroma}
-                      min={-50}
-                      max={50}
+                      min={-32}
+                      max={32}
                       onChange={this.onChromaChange}
                     />
                   </div>
