@@ -113,7 +113,7 @@ yarn
         <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/configuration.md">
           Configuration
         </Anchor>{" "}
-        for configuration shared by Dainty for different applications.
+        for more information.
       </Text>
     </Section>
   </>
