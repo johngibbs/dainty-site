@@ -284,6 +284,62 @@ export const Bold = props => (
   </React.Fragment>
 );
 
+export const Table = props => (
+  <React.Fragment>
+    <table>{props.children}</table>
+    <style jsx>{`
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 16px;
+      }
+    `}</style>
+  </React.Fragment>
+);
+
+export const Tr = props => (
+  <ColorsContext.Consumer>
+    {({ colors, getTypeShade }) => (
+      <React.Fragment>
+        <tr>{props.children}</tr>
+        <style jsx>{`
+          tr {
+            border-bottom: 0.5px solid ${colors.neutral[getTypeShade(10)]};
+          }
+        `}</style>
+      </React.Fragment>
+    )}
+  </ColorsContext.Consumer>
+);
+
+export const Th = props => (
+  <ColorsContext.Consumer>
+    {({ colors, getTypeShade }) => (
+      <React.Fragment>
+        <th>{props.children}</th>
+        <style jsx>{`
+          text-align: left;
+          font-weight: 400;
+          padding: 16px;
+        `}</style>
+      </React.Fragment>
+    )}
+  </ColorsContext.Consumer>
+);
+
+export const Td = props => (
+  <ColorsContext.Consumer>
+    {({ colors, getTypeShade }) => (
+      <React.Fragment>
+        <td>{props.children}</td>
+        <style jsx>{`
+          padding: 16px;
+        `}</style>
+      </React.Fragment>
+    )}
+  </ColorsContext.Consumer>
+);
+
 export const SyntaxHighlighterContainer = props => (
   <React.Fragment>
     <div>{props.children}</div>
@@ -310,6 +366,7 @@ export const CodeSection = props => (
           div {
             border: 1px solid ${colors.neutral[getTypeShade(6)]};
             padding: 16px 24px;
+            margin-bottom: 16px;
           }
 
           code {
@@ -330,7 +387,7 @@ export const Code = props => (
         <style jsx>{`
           code {
             font-family: "overpass-mono";
-            font-size: 16px;
+            font-size: 87.5%;
           }
         `}</style>
       </React.Fragment>
@@ -651,6 +708,13 @@ export const Sidebar = withRouter(({ router }) => (
             <ListItem>
               <Link href="/preview" prefetch>
                 <Anchor active={router.pathname === "/preview"}>Preview</Anchor>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="/configuration" prefetch>
+                <Anchor active={router.pathname === "/configuration"}>
+                  Configuration
+                </Anchor>
               </Link>
             </ListItem>
           </List>
