@@ -119,6 +119,9 @@ export const SiteContainer = props => (
 
           body {
             background-color: ${colors.neutral[getTypeShade(0)]};
+          }
+
+          * {
             transition: background-color 0.5s ease;
           }
 
