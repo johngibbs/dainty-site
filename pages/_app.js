@@ -22,7 +22,7 @@ export default class MyApp extends App {
       configuration: presets.daintyLight,
       colors,
       colorConstants,
-      lightnessStart: presets.daintyLight.colors._all.lightnessStart,
+      lightnessStart: 0,
       lightnessEnd: 0,
       chroma: 0
     };
@@ -52,14 +52,14 @@ export default class MyApp extends App {
   ) {
     let configuration = JSON.parse(JSON.stringify(presets[preset]));
 
-    configuration.colors._all.lightnessStart = lightnessStart;
-    configuration.colors._all.lightnessEnd = lightnessEnd;
-    configuration.colors._all.chroma = chroma;
+    configuration.colors._adjustments = {
+      lightnessStart,
+      lightnessEnd,
+      chroma
+    };
 
     const colors = generateColorScales(configuration);
     const colorConstants = generateColorConstants(colors);
-
-    console.log({ colorConstants });
 
     this.setState({
       configuration,
@@ -81,18 +81,13 @@ export default class MyApp extends App {
       configuration,
       colors,
       colorConstants,
-      lightnessStart: configuration.colors._all.lightnessStart,
-      lightnessEnd: configuration.colors._all.lightnessEnd
-        ? configuration.colors._all.lightnessEnd
-        : 0,
-      chroma: configuration.colors._all.chroma
-        ? configuration.colors._all.chroma
-        : 0
+      lightnessStart: 0,
+      lightnessEnd: 0,
+      chroma: 0
     });
   }
 
   setLightnessStart(value) {
-    console.log({ value });
     this.updatePreset(this.state.preset, value);
   }
 

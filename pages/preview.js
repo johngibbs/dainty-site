@@ -70,7 +70,7 @@ class Preview extends React.Component {
   getConfiguration(lightnessStart, lightnessEnd, chroma) {
     return `{
   "colors": {
-    "_all": {
+    "_adjustments": {
       "lightnessStart": ${lightnessStart},
       "lightnessEnd": ${lightnessEnd},
       "chroma": ${chroma}
