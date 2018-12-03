@@ -103,7 +103,13 @@ class Preview extends React.Component {
                     marginRight: 16
                   }}
                 >
-                  <div>
+                  <div
+                    style={{
+                      flex: "0 0 auto",
+                      display: "flex",
+                      flexDirection: "column"
+                    }}
+                  >
                     <Label>
                       Lightness start
                       {lightnessStart !== 0 && `: ${lightnessStart}`}
