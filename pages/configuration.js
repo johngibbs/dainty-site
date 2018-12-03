@@ -28,7 +28,7 @@ const Overview = () => (
       <Heading level={2}>Build parameters</Heading>
       <Subsection>
         <Heading level={3}>
-          <Code>-p</Code> or <Code>--preset</Code>
+          <Code>-p</Code> | <Code>--preset</Code>
         </Heading>
         <Text>
           <Small>
@@ -44,7 +44,7 @@ const Overview = () => (
       </Subsection>
       <Subsection>
         <Heading level={3}>
-          <Code>-i</Code> or <Code>--install</Code>
+          <Code>-i</Code> | <Code>--install</Code>
         </Heading>
         <Text>
           <Small>Installs Dainty if supported by generator.</Small>
@@ -53,7 +53,7 @@ const Overview = () => (
       </Subsection>
       <Subsection>
         <Heading level={3}>
-          <Code>-d</Code> or <Code>--deactivate</Code>
+          <Code>-d</Code> | <Code>--deactivate</Code>
         </Heading>
         <Text>
           <Small>Deactivates Dainty if supported by generator.</Small>
