@@ -97,20 +97,17 @@ class Preview extends React.Component {
               <div style={{ display: "flex", marginBottom: 32 }}>
                 <div
                   style={{
-                    flex: "1 0 auto",
+                    flex: "0 0 60%",
                     display: "flex",
                     flexDirection: "column",
                     marginRight: 16
                   }}
                 >
-                  <div
-                    style={{
-                      flex: "0 0 auto",
-                      display: "flex",
-                      flexDirection: "column"
-                    }}
-                  >
-                    <Label>Lightness start</Label>
+                  <div>
+                    <Label>
+                      Lightness start
+                      {lightnessStart !== 0 && `: ${lightnessStart}`}
+                    </Label>
                     <Slider
                       step={0.5}
                       value={lightnessStart}
@@ -126,7 +123,10 @@ class Preview extends React.Component {
                       flexDirection: "column"
                     }}
                   >
-                    <Label>Lightness end</Label>
+                    <Label>
+                      Lightness end
+                      {lightnessEnd !== 0 && `: ${lightnessEnd}`}
+                    </Label>
                     <Slider
                       step={0.5}
                       value={lightnessEnd}
@@ -142,7 +142,10 @@ class Preview extends React.Component {
                       flexDirection: "column"
                     }}
                   >
-                    <Label>Chroma</Label>
+                    <Label>
+                      Chroma
+                      {chroma !== 0 && `: ${chroma}`}
+                    </Label>
                     <Slider
                       step={0.5}
                       value={chroma}
@@ -154,7 +157,7 @@ class Preview extends React.Component {
                 </div>
                 <div
                   style={{
-                    flex: "1 0 auto",
+                    flex: "1 0 40%",
                     display: "flex",
                     flexDirection: "column",
                     marginLeft: 16
