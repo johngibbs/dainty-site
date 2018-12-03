@@ -53,10 +53,10 @@ const Overview = () => (
         branding colors of Prettier.
       </Text>
       <Text>
-        Try out different presets using the{" "}
+        Try out different presets on the{" "}
         <Link href="/preview">
           <Anchor>
-            <Bold>preview</Bold>
+            <Bold>Preview</Bold>
           </Anchor>
         </Link>{" "}
         page.
