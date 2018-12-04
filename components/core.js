@@ -438,9 +438,9 @@ export const Code = props => (
           code {
             font-family: "overpass-mono";
             font-size: 87.5%;
-            color: ${colors.purple[
-              getTypeShade(props.token === "punctuation" ? 12 : 32)
-            ]};
+            color: ${props.token === "punctuation"
+              ? colors.neutral[getTypeShade(26)]
+              : colors.purple[getTypeShade(32)]};
           }
         `}</style>
       </React.Fragment>
