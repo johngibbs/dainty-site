@@ -108,7 +108,7 @@ const Overview = () => (
             <Td>
               <Code>`number`</Code>
             </Td>
-            <Td>Lightness to be added or subtracted at start of scale</Td>
+            <Td>Lightness to be added or subtracted at start of scales</Td>
           </Tr>
           <Tr>
             <Td>
@@ -117,7 +117,7 @@ const Overview = () => (
             <Td>
               <Code>`number`</Code>
             </Td>
-            <Td>Lightness to be added or subtracted at end of scale</Td>
+            <Td>Lightness to be added or subtracted at end of scales</Td>
           </Tr>
           <Tr>
             <Td>
@@ -135,7 +135,7 @@ const Overview = () => (
             <Td>
               <Code>`number`</Code>
             </Td>
-            <Td>Chroma to be added or subtracted at start of scale</Td>
+            <Td>Chroma to be added or subtracted at start of scales</Td>
           </Tr>
           <Tr>
             <Td>
@@ -144,7 +144,7 @@ const Overview = () => (
             <Td>
               <Code>`number`</Code>
             </Td>
-            <Td>Chroma to be added or subtracted at end of scale</Td>
+            <Td>Chroma to be added or subtracted at end of scales</Td>
           </Tr>
         </tbody>
       </Table>
@@ -212,7 +212,7 @@ const Overview = () => (
               <Td>
                 <Code>`number`</Code>
               </Td>
-              <Td>Lightness to be added or subtracted at start of scale</Td>
+              <Td>Lightness to be added or subtracted at start of scales</Td>
             </Tr>
             <Tr>
               <Td>
@@ -221,7 +221,7 @@ const Overview = () => (
               <Td>
                 <Code>`number`</Code>
               </Td>
-              <Td>Lightness to be added or subtracted at end of scale</Td>
+              <Td>Lightness to be added or subtracted at end of scales</Td>
             </Tr>
             <Tr>
               <Td>
@@ -239,7 +239,7 @@ const Overview = () => (
               <Td>
                 <Code>`number`</Code>
               </Td>
-              <Td>Chroma to be added or subtracted at start of scale</Td>
+              <Td>Chroma to be added or subtracted at start of scales</Td>
             </Tr>
             <Tr>
               <Td>
@@ -248,7 +248,7 @@ const Overview = () => (
               <Td>
                 <Code>`number`</Code>
               </Td>
-              <Td>Chroma to be added or subtracted at end of scale</Td>
+              <Td>Chroma to be added or subtracted at end of scales</Td>
             </Tr>
           </tbody>
         </Table>
