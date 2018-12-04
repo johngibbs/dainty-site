@@ -816,50 +816,56 @@ export const Sidebar = withRouter(({ router }) => (
     {({ colors, getTypeShade }) => (
       <React.Fragment>
         <div className="sidebar">
-          <Heading level={3}>Dainty</Heading>
-          <List>
-            <ListItem>
-              <Link href="/">
-                <Anchor active={router.pathname === "/"}>Overview</Anchor>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link href="/preview" prefetch>
-                <Anchor active={router.pathname === "/preview"}>Preview</Anchor>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link href="/configuration" prefetch>
-                <Anchor active={router.pathname === "/configuration"}>
-                  Configuration
-                </Anchor>
-              </Link>
-            </ListItem>
-          </List>
-          <Heading level={3}>Applications</Heading>
-          <List>
-            <ListItem>
-              <Link href="/vscode" prefetch>
-                <Anchor active={router.pathname === "/vscode"}>
-                  Visual Studio Code
-                </Anchor>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link href="/vs" prefetch>
-                <Anchor active={router.pathname === "/vs"}>
-                  Visual Studio
-                </Anchor>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link href="/wsltty" prefetch>
-                <Anchor active={router.pathname === "/wsltty"}>
-                  WSLtty/Mintty
-                </Anchor>
-              </Link>
-            </ListItem>
-          </List>
+          <Subsection>
+            <Heading level={3}>Dainty</Heading>
+            <List>
+              <ListItem>
+                <Link href="/">
+                  <Anchor active={router.pathname === "/"}>Overview</Anchor>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link href="/preview" prefetch>
+                  <Anchor active={router.pathname === "/preview"}>
+                    Preview
+                  </Anchor>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link href="/configuration" prefetch>
+                  <Anchor active={router.pathname === "/configuration"}>
+                    Configuration
+                  </Anchor>
+                </Link>
+              </ListItem>
+            </List>
+          </Subsection>
+          <Subsection>
+            <Heading level={3}>Applications</Heading>
+            <List>
+              <ListItem>
+                <Link href="/vscode" prefetch>
+                  <Anchor active={router.pathname === "/vscode"}>
+                    Visual Studio Code
+                  </Anchor>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link href="/vs" prefetch>
+                  <Anchor active={router.pathname === "/vs"}>
+                    Visual Studio
+                  </Anchor>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link href="/wsltty" prefetch>
+                  <Anchor active={router.pathname === "/wsltty"}>
+                    WSLtty/Mintty
+                  </Anchor>
+                </Link>
+              </ListItem>
+            </List>
+          </Subsection>
         </div>
         <style jsx>{`
           width: 256px;
