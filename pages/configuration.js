@@ -36,7 +36,8 @@ const Overview = () => (
       </Subsection>
       <Subsection>
         <Heading level={3}>
-          <Code>-p</Code> | <Code>--preset</Code>
+          <Code>-p</Code> <Code token="punctuation">&nbsp;|&nbsp;</Code>{" "}
+          <Code>--preset</Code>
         </Heading>
         <Text>
           <Small>
@@ -52,7 +53,8 @@ const Overview = () => (
       </Subsection>
       <Subsection>
         <Heading level={3}>
-          <Code>-i</Code> | <Code>--install</Code>
+          <Code>-i</Code> <Code token="punctuation">&nbsp;|&nbsp;</Code>{" "}
+          <Code>--install</Code>
         </Heading>
         <Text>
           <Small>Installs Dainty if supported by generator.</Small>
@@ -61,7 +63,8 @@ const Overview = () => (
       </Subsection>
       <Subsection>
         <Heading level={3}>
-          <Code>-d</Code> | <Code>--deactivate</Code>
+          <Code>-d</Code> <Code token="punctuation">&nbsp;|&nbsp;</Code>{" "}
+          <Code>--deactivate</Code>
         </Heading>
         <Text>
           <Small>Deactivates Dainty if supported by generator.</Small>
