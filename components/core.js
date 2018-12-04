@@ -139,7 +139,20 @@ export const SiteContainer = props => (
             display: flex;
             justify-content: center;
             line-height: 1.875;
-            font-size: 18px;
+          }
+
+          @media (max-width: 1023.98px) {
+            div {
+              font-size: 16px;
+              justify-content: flex-start;
+            }
+          }
+
+          @media (min-width: 1024px) {
+            div {
+              font-size: 18px;
+              justify-content: center;
+            }
           }
         `}</style>
       </React.Fragment>
@@ -286,8 +299,15 @@ export const Bold = props => (
 
 export const Table = props => (
   <React.Fragment>
-    <table>{props.children}</table>
+    <div>
+      <table>{props.children}</table>
+    </div>
     <style jsx>{`
+      div {
+        overflow-x: auto;
+        margin-bottom: 32px;
+      }
+
       table {
         border-collapse: collapse;
         width: 100%;
@@ -366,7 +386,7 @@ export const CodeSection = props => (
           div {
             border: 1px solid ${colors.neutral[getTypeShade(6)]};
             padding: 16px 24px;
-            margin-bottom: 16px;
+            margin-bottom: 32px;
           }
 
           code {
@@ -419,28 +439,24 @@ export const Page = props => (
         <div>{props.children}</div>
         <style jsx>{`
           div {
-            max-width: 1280px;
             display: flex;
           }
 
           @media (max-width: 1439.98px) {
             div {
               flex-direction: column;
-              padding: 0 32px;
               margin-top: 32px;
             }
           }
 
           @media (min-width: 1440px) {
             div {
-              transform: translate(-64px, 0);
               margin-top: 64px;
             }
           }
 
           @media (min-width: 1760px) {
             div {
-              transform: translate(-64px, 0);
             }
           }
         `}</style>
@@ -527,7 +543,7 @@ export const Subsection = props => (
   <ColorsContext.Consumer>
     {({ colors, getTypeShade }) => (
       <React.Fragment>
-        <section {...props}>{props.children}</section>
+        <div {...props}>{props.children}</div>
         <style jsx>{`
           section {
             margin-bottom: 32px;
@@ -814,7 +830,13 @@ export const Content = props => (
           </Section>
         </div>
         <style jsx>{`
-          max-width: 1024px;
+          @media (max-width: 1023.98px) {
+            width: 100vw;
+          }
+
+          @media (min-width: 1024px) {
+            width: 1024px;
+          }
         `}</style>
       </React.Fragment>
     )}
@@ -835,7 +857,7 @@ export const Select = props => (
             margin-bottom: 16px;
             padding: 12px 8px;
             font-family: inherit;
-            font-size: 14;
+            font-size: 14px;
           }
         `}</style>
       </React.Fragment>
