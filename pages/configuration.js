@@ -25,7 +25,9 @@ const Overview = () => (
       </Text>
     </Section>
     <Section>
-      <Heading level={2}>Build parameters</Heading>
+      <Subsection>
+        <Heading level={2}>Build parameters</Heading>
+      </Subsection>
       <Subsection>
         <Heading level={3}>
           <Code>-p</Code> | <Code>--preset</Code>
@@ -62,100 +64,107 @@ const Overview = () => (
       </Subsection>
     </Section>
     <Section>
-      <Heading level={2}>User configuration</Heading>
-      <Text>
-        <Small>
-          If a property is set in both <Code>`configuration.jsonc`</Code> and
-          the preset configuration, then the one in{" "}
-          <Code>`configuration.jsonc`</Code> is used.
-        </Small>
-      </Text>
-
-      <Heading level={3}>
-        <Code>`preset`</Code> (<Code>`string`</Code>)
-      </Heading>
-      <Text>
-        <Small>
-          Preset to use if no preset is specified. Defaults to{" "}
-          <Code>`dainty-dark`</Code>.
-        </Small>
-      </Text>
-      <Heading level={3}>
-        <Code>`colors._adjustments`</Code> (<Code>`object`</Code>)
-      </Heading>
-      <Table>
-        <thead>
-          <Tr>
-            <Th>Property</Th>
-            <Th>Type</Th>
-            <Th>Description</Th>
-          </Tr>
-        </thead>
-        <tbody>
-          <Tr>
-            <Td>
-              <Code>`lightness`</Code>
-            </Td>
-            <Td>
-              <Code>`number`</Code>
-            </Td>
-            <Td>Lightness to be added or subtracted</Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Code>`lightnessStart`</Code>
-            </Td>
-            <Td>
-              <Code>`number`</Code>
-            </Td>
-            <Td>Lightness to be added or subtracted at start of scales</Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Code>`lightnessEnd`</Code>
-            </Td>
-            <Td>
-              <Code>`number`</Code>
-            </Td>
-            <Td>Lightness to be added or subtracted at end of scales</Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Code>`chroma`</Code>
-            </Td>
-            <Td>
-              <Code>`number`</Code>
-            </Td>
-            <Td>Chroma to be added or subtracted</Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Code>`chromaStart`</Code>
-            </Td>
-            <Td>
-              <Code>`number`</Code>
-            </Td>
-            <Td>Chroma to be added or subtracted at start of scales</Td>
-          </Tr>
-          <Tr>
-            <Td>
-              <Code>`chromaEnd`</Code>
-            </Td>
-            <Td>
-              <Code>`number`</Code>
-            </Td>
-            <Td>Chroma to be added or subtracted at end of scales</Td>
-          </Tr>
-        </tbody>
-      </Table>
+      <Subsection>
+        <Heading level={2}>User configuration</Heading>
+        <Text>
+          <Small>
+            If a property is set in both <Code>`configuration.jsonc`</Code> and
+            the preset configuration, then the one in{" "}
+            <Code>`configuration.jsonc`</Code> is used.
+          </Small>
+        </Text>
+      </Subsection>
+      <Subsection>
+        <Heading level={3}>
+          <Code>`preset`</Code> (<Code>`string`</Code>)
+        </Heading>
+        <Text>
+          <Small>
+            Preset to use if no preset is specified. Defaults to{" "}
+            <Code>`dainty-dark`</Code>.
+          </Small>
+        </Text>
+      </Subsection>
+      <Subsection>
+        <Heading level={3}>
+          <Code>`colors._adjustments`</Code> (<Code>`object`</Code>)
+        </Heading>
+        <Table>
+          <thead>
+            <Tr>
+              <Th>Property</Th>
+              <Th>Type</Th>
+              <Th>Description</Th>
+            </Tr>
+          </thead>
+          <tbody>
+            <Tr>
+              <Td>
+                <Code>`lightness`</Code>
+              </Td>
+              <Td>
+                <Code>`number`</Code>
+              </Td>
+              <Td>Lightness to be added or subtracted</Td>
+            </Tr>
+            <Tr>
+              <Td>
+                <Code>`lightnessStart`</Code>
+              </Td>
+              <Td>
+                <Code>`number`</Code>
+              </Td>
+              <Td>Lightness to be added or subtracted at start of scales</Td>
+            </Tr>
+            <Tr>
+              <Td>
+                <Code>`lightnessEnd`</Code>
+              </Td>
+              <Td>
+                <Code>`number`</Code>
+              </Td>
+              <Td>Lightness to be added or subtracted at end of scales</Td>
+            </Tr>
+            <Tr>
+              <Td>
+                <Code>`chroma`</Code>
+              </Td>
+              <Td>
+                <Code>`number`</Code>
+              </Td>
+              <Td>Chroma to be added or subtracted</Td>
+            </Tr>
+            <Tr>
+              <Td>
+                <Code>`chromaStart`</Code>
+              </Td>
+              <Td>
+                <Code>`number`</Code>
+              </Td>
+              <Td>Chroma to be added or subtracted at start of scales</Td>
+            </Tr>
+            <Tr>
+              <Td>
+                <Code>`chromaEnd`</Code>
+              </Td>
+              <Td>
+                <Code>`number`</Code>
+              </Td>
+              <Td>Chroma to be added or subtracted at end of scales</Td>
+            </Tr>
+          </tbody>
+        </Table>
+      </Subsection>
     </Section>
     <Section>
-      <Heading level={2}>Preset configuration</Heading>
-      <Text>
-        <Small>
-          The following properties are intended to be set only by presets.
-        </Small>
-      </Text>
+      <Subsection>
+        <Heading level={2}>Preset configuration</Heading>
+        <Text>
+          <Small>
+            The following properties are intended to be set only by presets.
+          </Small>
+        </Text>
+      </Subsection>
       <Subsection>
         <Heading level={3}>
           <Code>`type`</Code> (<Code>string</Code>)

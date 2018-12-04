@@ -544,7 +544,7 @@ export const Subsection = props => (
       <React.Fragment>
         <div {...props}>{props.children}</div>
         <style jsx>{`
-          section {
+          div {
             margin-bottom: 32px;
           }
         `}</style>
