@@ -137,7 +137,6 @@ export const SiteContainer = props => (
             color: ${colors.neutral[getTypeShade(34, 0)]};
             font-weight: 300;
             display: flex;
-            justify-content: center;
             line-height: 1.875;
           }
 
