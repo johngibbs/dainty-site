@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Heading,
   Section,
@@ -110,9 +111,11 @@ yarn
         Dainty can be configured by editing <Code>`configuration.jsonc`</Code>.
         The file is generated if it doesn’t exist while running{" "}
         <Code>`yarn build`</Code>. See{" "}
-        <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/configuration.md">
-          Configuration
-        </Anchor>{" "}
+        <Link href="/configuration">
+          <Anchor>
+            <Bold>Configuration</Bold>
+          </Anchor>
+        </Link>{" "}
         for more information.
       </Text>
     </Section>
