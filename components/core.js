@@ -665,7 +665,7 @@ export const Slider = props => {
             }
             .rc-slider-handle:focus {
               border-color: ${colors.neutral[getTypeShade(20)]};
-              box-shadow: 0 0 0 5px ${colors.neutral[getTypeShade(16)]};
+              box-shadow: 0 0 0 1px ${colors.blueLessChroma[getTypeShade(16)]};
               outline: none;
             }
             .rc-slider-handle-click-focused:focus {
@@ -677,7 +677,7 @@ export const Slider = props => {
             }
             .rc-slider-handle:active {
               border-color: ${colors.neutral[getTypeShade(20)]};
-              box-shadow: 0 0 5px ${colors.neutral[getTypeShade(20)]};
+              box-shadow: 0 0 1px ${colors.blueLessChroma[getTypeShade(20)]};
               cursor: -webkit-grabbing;
               cursor: grabbing;
             }
@@ -950,6 +950,16 @@ export const Select = props => (
             font-size: 14px;
             font-weight: inherit;
           }
+
+          select:hover {
+            color: ${colors.neutral[getTypeShade(38)]};
+            background-color: ${colors.neutral[getTypeShade(5)]};
+          }
+
+          select:focus {
+            box-shadow: 0 0 0 1px ${colors.blueLessChroma[getTypeShade(16)]};
+            outline: none;
+          }
         `}</style>
       </React.Fragment>
     )}
@@ -963,6 +973,9 @@ export const Option = props => (
         <option {...props}>{props.children}</option>
         <style jsx>{`
           option {
+            background-color: ${colors.neutral[getTypeShade(3)]};
+            color: ${colors.neutral[getTypeShade(34)]};
+            font-weight: inherit;
           }
         `}</style>
       </React.Fragment>
