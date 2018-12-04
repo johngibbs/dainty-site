@@ -646,7 +646,7 @@ export const Slider = props => {
               left: 0;
               height: 4px;
               border-radius: 6px;
-              background-color: ${colors.blueLessChroma[getTypeShade(6)]};
+              background-color: ${colors.neutral[getTypeShade(12)]};
             }
             .rc-slider-handle {
               position: absolute;
@@ -658,26 +658,26 @@ export const Slider = props => {
               cursor: -webkit-grab;
               cursor: grab;
               border-radius: 50%;
-              border: solid 2px ${colors.blueLessChroma[getTypeShade(16)]};
+              border: solid 2px ${colors.neutral[getTypeShade(16)]};
               background-color: ${colors.neutral[40]};
               -ms-touch-action: pan-x;
               touch-action: pan-x;
             }
             .rc-slider-handle:focus {
-              border-color: ${colors.blueLessChroma[getTypeShade(20)]};
-              box-shadow: 0 0 0 5px ${colors.blueLessChroma[getTypeShade(16)]};
+              border-color: ${colors.neutral[getTypeShade(20)]};
+              box-shadow: 0 0 0 5px ${colors.neutral[getTypeShade(16)]};
               outline: none;
             }
             .rc-slider-handle-click-focused:focus {
-              border-color: ${colors.blueLessChroma[getTypeShade(16)]};
+              border-color: ${colors.neutral[getTypeShade(16)]};
               box-shadow: unset;
             }
             .rc-slider-handle:hover {
-              border-color: ${colors.blueLessChroma[getTypeShade(20)]};
+              border-color: ${colors.neutral[getTypeShade(20)]};
             }
             .rc-slider-handle:active {
-              border-color: ${colors.blueLessChroma[getTypeShade(20)]};
-              box-shadow: 0 0 5px ${colors.blueLessChroma[getTypeShade(20)]};
+              border-color: ${colors.neutral[getTypeShade(20)]};
+              box-shadow: 0 0 5px ${colors.neutral[getTypeShade(20)]};
               cursor: -webkit-grabbing;
               cursor: grabbing;
             }
