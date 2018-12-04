@@ -391,6 +391,7 @@ export const CodeSection = props => (
           code {
             font-family: "overpass-mono";
             font-size: 14px;
+            color: ${colors.purple[getTypeShade(32)]};
           }
         `}</style>
       </React.Fragment>
@@ -407,6 +408,7 @@ export const Code = props => (
           code {
             font-family: "overpass-mono";
             font-size: 87.5%;
+            color: ${colors.purple[getTypeShade(32)]};
           }
         `}</style>
       </React.Fragment>
