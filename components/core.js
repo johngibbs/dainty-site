@@ -742,7 +742,7 @@ export const Heading = props => {
 
             h1 {
               font-weight: 300;
-              margin-bottom: 16px;
+              margin-bottom: 24px;
             }
 
             h2 {
