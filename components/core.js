@@ -419,9 +419,29 @@ export const Page = props => (
         <div>{props.children}</div>
         <style jsx>{`
           div {
-            width: 1440px;
+            max-width: 1280px;
             display: flex;
-            margin-top: 64px;
+          }
+
+          @media (max-width: 1439.98px) {
+            div {
+              flex-direction: column;
+              padding: 0 32px;
+              margin-top: 32px;
+            }
+          }
+
+          @media (min-width: 1440px) {
+            div {
+              transform: translate(-64px, 0);
+              margin-top: 64px;
+            }
+          }
+
+          @media (min-width: 1760px) {
+            div {
+              transform: translate(-64px, 0);
+            }
           }
         `}</style>
       </React.Fragment>
@@ -744,7 +764,6 @@ export const Sidebar = withRouter(({ router }) => (
           </List>
         </div>
         <style jsx>{`
-          color: ${colors.neutral[getTypeShade(34)]};
           width: 256px;
         `}</style>
       </React.Fragment>
@@ -795,7 +814,7 @@ export const Content = props => (
           </Section>
         </div>
         <style jsx>{`
-          width: 1024px;
+          max-width: 1024px;
         `}</style>
       </React.Fragment>
     )}
