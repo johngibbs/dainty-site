@@ -11,7 +11,7 @@ export function getCustomizations(colors, getTypeShade, getTokenColor) {
       // whiteSpace: "pre",
       // wordSpacing: "normal",
       // wordBreak: "normal",
-      fontSize: 14
+      fontSize: 13
       // lineHeight: 1.5,
       // MozTabSize: "4",
       // OTabSize: "4",

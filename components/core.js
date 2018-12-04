@@ -527,6 +527,18 @@ export const List = props => (
               ? "flex-direction: row"
               : "flex-direction: column"};
           }
+
+          @media (max-width: 1023.98px) {
+            ul {
+              font-size: 15px;
+            }
+          }
+
+          @media (min-width: 1024px) {
+            ul {
+              font-size: 16px;
+            }
+          }
         `}</style>
       </React.Fragment>
     )}
@@ -623,7 +635,7 @@ export const Slider = props => {
             .rc-slider-rail {
               position: absolute;
               width: 100%;
-              background-color: ${colors.neutral[getTypeShade(8)]};
+              background-color: ${colors.neutral[getTypeShade(3)]};
               height: 4px;
               border-radius: 6px;
             }
@@ -632,7 +644,7 @@ export const Slider = props => {
               left: 0;
               height: 4px;
               border-radius: 6px;
-              background-color: ${colors.neutral[24]};
+              background-color: ${colors.neutral[getTypeShade(8)]};
             }
             .rc-slider-handle {
               position: absolute;
@@ -920,7 +932,7 @@ export const Select = props => (
         <select {...props}>{props.children}</select>
         <style jsx>{`
           select {
-            background-color: ${colors.neutral[getTypeShade(4)]};
+            background-color: ${colors.neutral[getTypeShade(3)]};
             color: ${colors.neutral[getTypeShade(34)]};
             cursor: pointer;
             border: none;
@@ -928,6 +940,7 @@ export const Select = props => (
             padding: 12px 8px;
             font-family: inherit;
             font-size: 14px;
+            font-weight: inherit;
           }
         `}</style>
       </React.Fragment>
