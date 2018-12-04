@@ -97,7 +97,7 @@ class Preview extends React.Component {
               <div style={{ display: "flex", marginBottom: 32 }}>
                 <div
                   style={{
-                    flex: "0 0 60%",
+                    flex: "0 0 calc(60% - 16px)",
                     display: "flex",
                     flexDirection: "column",
                     marginRight: 16
@@ -163,7 +163,7 @@ class Preview extends React.Component {
                 </div>
                 <div
                   style={{
-                    flex: "1 0 40%",
+                    flex: "0 0 calc(40% - 16px)",
                     display: "flex",
                     flexDirection: "column",
                     marginLeft: 16
