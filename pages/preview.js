@@ -29,7 +29,8 @@ import {
   Code,
   List,
   ListItem,
-  SyntaxHighlighterContainer
+  SyntaxHighlighterContainer,
+  Subsection
 } from "../components/core";
 
 class Preview extends React.Component {
@@ -217,35 +218,50 @@ class Preview extends React.Component {
             </Section>
             <Section>
               <Heading level={2}>Use this configuration</Heading>
-              <List listStyle="–">
-                <ListItem listStyle="–">
-                  Clone the repository for{" "}
-                  <Code>`dainty-&lt;application&gt;`</Code>
-                </ListItem>
-                <ListItem listStyle="–">
-                  Copy the configuration below to{" "}
-                  <Code>`configuration.jsonc`</Code>
-                </ListItem>
-                <ListItem listStyle="–">
-                  Run{" "}
-                  <Code>`yarn build -p {changeCase.paramCase(preset)}`</Code>
-                </ListItem>
-              </List>
-              <Text small>
-                <i>
-                  The flag <Code>`-i`</Code> can be added to{" "}
-                  <Code>`yarn build`</Code> to install the color theme. However,
-                  this is currently not supported by <Code>`dainty-vs`</Code>.
-                </i>
-              </Text>
-              <SyntaxHighlighterContainer>
-                <SyntaxHighlighter
-                  language="javascript"
-                  style={getCustomizations(colors, getTypeShade, getTokenColor)}
-                >
-                  {this.getConfiguration(lightnessStart, lightnessEnd, chroma)}
-                </SyntaxHighlighter>
-              </SyntaxHighlighterContainer>
+              <Subsection>
+                <List listStyle="–">
+                  <ListItem listStyle="–">
+                    Clone the repository for{" "}
+                    <Code>`dainty-&lt;application&gt;`</Code>
+                  </ListItem>
+                  <ListItem listStyle="–">
+                    Copy the configuration below to{" "}
+                    <Code>`configuration.jsonc`</Code>
+                  </ListItem>
+                  <ListItem listStyle="–">
+                    Run{" "}
+                    <Code>`yarn build -p {changeCase.paramCase(preset)}`</Code>
+                  </ListItem>
+                </List>
+              </Subsection>
+              <Subsection>
+                <Text small>
+                  <i>
+                    The flag <Code>`-i`</Code> can be added to{" "}
+                    <Code>`yarn build`</Code> to install the color theme.
+                    However, this is currently not supported by{" "}
+                    <Code>`dainty-vs`</Code>.
+                  </i>
+                </Text>
+              </Subsection>
+              <Subsection>
+                <SyntaxHighlighterContainer>
+                  <SyntaxHighlighter
+                    language="javascript"
+                    style={getCustomizations(
+                      colors,
+                      getTypeShade,
+                      getTokenColor
+                    )}
+                  >
+                    {this.getConfiguration(
+                      lightnessStart,
+                      lightnessEnd,
+                      chroma
+                    )}
+                  </SyntaxHighlighter>
+                </SyntaxHighlighterContainer>
+              </Subsection>
             </Section>
           </>
         )}

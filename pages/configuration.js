@@ -27,6 +27,12 @@ const Overview = () => (
     <Section>
       <Subsection>
         <Heading level={2}>Build parameters</Heading>
+        <Text>
+          <Small>
+            This section describes the build parameters that can be passed to{" "}
+            <Code>`yarn build`</Code>.
+          </Small>
+        </Text>
       </Subsection>
       <Subsection>
         <Heading level={3}>
@@ -38,8 +44,8 @@ const Overview = () => (
             <Code>`configuration.jsonc`</Code>. They are intended for turning
             Dainty into another color theme. Presets are located in the{" "}
             <Code>`presets`</Code> directory of the shared repository and can be
-            activated by adding <Code>`-p &lt;preset&gt;`</Code> or
-            <Code>`--preset &lt;preset&gt;`</Code> to <Code>`yarn build`</Code>:
+            activated by using <Code>`-p &lt;preset&gt;`</Code> or
+            <Code>`--preset &lt;preset&gt;`</Code>:
           </Small>
         </Text>
         <CodeSection>yarn build -p dainty-light</CodeSection>
@@ -64,8 +70,8 @@ const Overview = () => (
       </Subsection>
     </Section>
     <Section>
+      <Heading level={2}>User configuration</Heading>
       <Subsection>
-        <Heading level={2}>User configuration</Heading>
         <Text>
           <Small>
             If a property is set in both <Code>`configuration.jsonc`</Code> and
@@ -164,8 +170,6 @@ const Overview = () => (
             The following properties are intended to be set only by presets.
           </Small>
         </Text>
-      </Subsection>
-      <Subsection>
         <Heading level={3}>
           <Code>`type`</Code> (<Code>string</Code>)
         </Heading>
@@ -270,14 +274,16 @@ const Overview = () => (
           (<Code>object</Code>)
         </Heading>
         <Text>
-          With a provided base color a scale of 41 shades is built. When color
-          is expressed as hex as opposed to hue and chroma, the color will be
-          converted to LCh and its hue and chroma are used while the lightness
-          is calculated. See{" "}
-          <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/presets/dainty-dark.jsonc">
-            <Code>`dainty-dark.jsonc`</Code>
-          </Anchor>{" "}
-          for all available colors.
+          <Small>
+            With a provided base color a scale of 41 shades is built. When color
+            is expressed as hex as opposed to hue and chroma, the color will be
+            converted to LCh and its hue and chroma are used while the lightness
+            is calculated. See{" "}
+            <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/presets/dainty-dark.jsonc">
+              <Code>`dainty-dark.jsonc`</Code>
+            </Anchor>{" "}
+            for all available colors.
+          </Small>
         </Text>
         <Table>
           <thead>

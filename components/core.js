@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ColorsContext } from "../colors-context";
+import { alpha } from "dainty-shared/src/colors";
 import RcSlider from "rc-slider";
 import { withRouter } from "next/router";
 import changeCase from "change-case";
@@ -62,7 +63,7 @@ export const ScreenshotContainer = props => (
         <div>{props.children}</div>
         <style jsx>{`
           div {
-            box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.1875);
+            box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1875);
             position: relative;
             padding-bottom: 75%;
             height: 0;
@@ -125,7 +126,7 @@ export const SiteContainer = props => (
             transition: background-color 0.5s ease;
           }
 
-          * { margin: 0; padding: 0; }
+          * { margin: 0; padding: 0; box-sizing: border-box; }
         `}</style>
         </Head>
         <div>{props.children}</div>
@@ -136,21 +137,18 @@ export const SiteContainer = props => (
               Segoe UI Symbol;
             color: ${colors.neutral[getTypeShade(34, 0)]};
             font-weight: 300;
-            display: flex;
             line-height: 1.875;
           }
 
           @media (max-width: 1023.98px) {
             div {
               font-size: 16px;
-              justify-content: flex-start;
             }
           }
 
           @media (min-width: 1024px) {
             div {
-              font-size: 18px;
-              justify-content: center;
+              font-size: 17px;
             }
           }
         `}</style>
@@ -165,7 +163,18 @@ export const Text = props => (
     <style jsx>{`
       p {
         margin-bottom: 16px;
-        ${props.small && "font-size: 16px"};
+      }
+
+      @media (max-width: 1023.98px) {
+        p {
+          ${props.small && "font-size: 14px"};
+        }
+      }
+
+      @media (min-width: 1024px) {
+        p {
+          ${props.small && "font-size: 15px"};
+        }
       }
     `}</style>
   </React.Fragment>
@@ -254,7 +263,7 @@ export const GitHubCorner = props => (
           }
 
           .github-corner {
-            fill: ${colors.neutral[getTypeShade(2)]};
+            fill: ${alpha(colors.neutral[getTypeShade(4)], 0.75)};
             color: ${colors.blue[getTypeShade(36)]};
             position: fixed;
             top: 0;
@@ -278,8 +287,16 @@ export const Small = props => (
   <React.Fragment>
     <span>{props.children}</span>
     <style jsx>{`
-      span {
-        font-size: 16px;
+      @media (max-width: 1023.98px) {
+        span {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        span {
+          font-size: 15px;
+        }
       }
     `}</style>
   </React.Fragment>
@@ -310,7 +327,18 @@ export const Table = props => (
       table {
         border-collapse: collapse;
         width: 100%;
-        font-size: 16px;
+      }
+
+      @media (max-width: 1023.98px) {
+        div {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        div {
+          font-size: 15px;
+        }
       }
     `}</style>
   </React.Fragment>
@@ -364,9 +392,11 @@ export const SyntaxHighlighterContainer = props => (
     <div>{props.children}</div>
     <style jsx>{`
       div {
-        box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.1875);
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1875);
         ${props.height && `height: ${props.height}px`};
         padding: 16px 24px;
+        overflow-x: auto;
+        margin-bottom: 32px;
       }
     `}</style>
   </React.Fragment>
@@ -443,6 +473,20 @@ export const Page = props => (
             display: flex;
           }
 
+          @media (max-width: 1279.98px) {
+            div {
+              width: 100%;
+              padding: 0 24px;
+            }
+          }
+
+          @media (min-width: 1280px) {
+            div {
+              width: 1280px;
+              margin: 0 auto;
+            }
+          }
+
           @media (max-width: 1439.98px) {
             div {
               flex-direction: column;
@@ -473,8 +517,7 @@ export const List = props => (
         <ul>{props.children}</ul>
         <style jsx>{`
           ul {
-            font-size: 17px;
-            ${!props.nested && "margin-bottom: 32px"};
+            ${!props.nested && "margin-bottom: 16px"};
             ${props.nested && "margin-bottom: 16px"};
             list-style: none;
             ${props.listStyle &&
@@ -514,7 +557,7 @@ export const ListItem = props => (
             margin-left: ${props.listStyle === "✓" ? "-22px" : "-18px"};
             color: ${
               props.listStyle === "✓"
-                ? colors.blue[getTypeShade(24)]
+                ? colors.blueLessChroma[getTypeShade(24)]
                 : colors.neutral[getTypeShade(16)]
             };
             `};
@@ -532,7 +575,7 @@ export const Section = props => (
         <section {...props}>{props.children}</section>
         <style jsx>{`
           section {
-            margin-bottom: 64px;
+            margin-bottom: 48px;
           }
         `}</style>
       </React.Fragment>
@@ -682,24 +725,50 @@ export const Heading = props => {
             h1,
             h2,
             h3 {
-              font-weight: 300;
               color: ${colors.blueLessChroma[getTypeShade(34)]};
             }
 
             h1 {
-              font-size: 32px;
-              margin-bottom: 24px;
+              font-weight: 300;
+              margin-bottom: 16px;
             }
 
             h2 {
-              font-size: 24px;
+              font-weight: 300;
               margin-bottom: 16px;
             }
 
             h3 {
-              font-size: 18px;
               font-weight: 400;
               margin-bottom: 16px;
+            }
+
+            @media (max-width: 1023.98px) {
+              h1 {
+                font-size: 30px;
+              }
+
+              h2 {
+                font-size: 22px;
+              }
+
+              h3 {
+                font-size: 16px;
+              }
+            }
+
+            @media (min-width: 1024px) {
+              h1 {
+                font-size: 31px;
+              }
+
+              h2 {
+                font-size: 23px;
+              }
+
+              h3 {
+                font-size: 17px;
+              }
             }
           `}</style>
         </React.Fragment>
@@ -832,7 +901,7 @@ export const Content = props => (
         </div>
         <style jsx>{`
           @media (max-width: 1023.98px) {
-            width: 100vw;
+            width: 100%;
           }
 
           @media (min-width: 1024px) {
