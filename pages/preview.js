@@ -67,8 +67,8 @@ class Preview extends React.Component {
 
   getConfiguration(preset, lightnessStart, lightnessEnd, chroma) {
     return `{
+  "preset": "${changeCase.paramCase(preset)}",
   "colors": {
-    "preset": "${changeCase.paramCase(preset)}",
     "_adjustments": {
       "lightnessStart": ${lightnessStart},
       "lightnessEnd": ${lightnessEnd},
