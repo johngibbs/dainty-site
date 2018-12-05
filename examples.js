@@ -2,44 +2,44 @@ export const examples = {
   jsx: {
     name: "JavaScript",
     code: `import React from "react";
-    import App, { Container } from "next/app";
-    // …
-    
-    export default class MyApp extends App {
-      constructor(props) {
-        super(props);
-    
-        const colors = generateColorScales(presets.daintyLight);
-        const colorConstants = generateColorConstants(colors);
-    
-        this.state = {
-          preset: "daintyLight",
-          configuration: presets.daintyLight,
-          colors,
-          colorConstants,
-          lightnessStart: 0,
-          lightnessEnd: 0,
-          chroma: 0
-        };
-    
-        this.updatePreset = this.updatePreset.bind(this);
-        this.setPreset = this.setPreset.bind(this);
-        this.setLightnessStart = this.setLightnessStart.bind(this);
-        this.setLightnessEnd = this.setLightnessEnd.bind(this);
-        this.setChroma = this.setChroma.bind(this);
-      }
-    
-      static async getInitialProps({ Component, ctx }) {
-        let pageProps = {};
-    
-        if (Component.getInitialProps) {
-          pageProps = await Component.getInitialProps(ctx);
-        }
-    
-        return { pageProps };
-      }
+import App, { Container } from "next/app";
+// …
 
-      // …`
+export default class MyApp extends App {
+  constructor(props) {
+    super(props);
+
+    const colors = generateColorScales(presets.daintyLight);
+    const colorConstants = generateColorConstants(colors);
+
+    this.state = {
+      preset: "daintyLight",
+      configuration: presets.daintyLight,
+      colors,
+      colorConstants,
+      lightnessStart: 0,
+      lightnessEnd: 0,
+      chroma: 0
+    };
+
+    this.updatePreset = this.updatePreset.bind(this);
+    this.setPreset = this.setPreset.bind(this);
+    this.setLightnessStart = this.setLightnessStart.bind(this);
+    this.setLightnessEnd = this.setLightnessEnd.bind(this);
+    this.setChroma = this.setChroma.bind(this);
+  }
+
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+
+    return { pageProps };
+  }
+
+  // …`
   },
   csharp: {
     name: "C#",
@@ -119,7 +119,7 @@ ul ul {
   },
   python: {
     name: "Python",
-    code: `// From https://github.com/gothinkster/django-realworld-example-app/blob/master/conduit/apps/articles/signals.py
+    code: `# From https://github.com/gothinkster/django-realworld-example-app/blob/master/conduit/apps/articles/signals.py
 
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
