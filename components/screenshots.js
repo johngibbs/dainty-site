@@ -66,7 +66,12 @@ export const ScreenshotContainer = props => (
             padding-bottom: 75%;
             height: 0;
             overflow: hidden;
-            transition: opacity 0.25s ease;
+          }
+
+          @media (min-width: 1024px) {
+            div {
+              transition: opacity 0.25s ease;
+            }
           }
         `}</style>
       </React.Fragment>

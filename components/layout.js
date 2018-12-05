@@ -45,7 +45,12 @@ export const SiteContainer = props => (
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: background-color 0.25s ease;
+          }
+
+          @media (min-width: 1024px) {
+            * {
+              transition: background-color 0.25s ease;
+            }
           }
         `}</style>
         </Head>
