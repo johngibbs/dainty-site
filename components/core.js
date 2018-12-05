@@ -229,8 +229,8 @@ export class ScrollContainer extends React.Component {
                 position: absolute;
                 background: linear-gradient(
                   to right,
-                  rgba(0, 0, 0, 0) 0%,
-                  rgba(0, 0, 0, 0) 87.5%,
+                  ${alpha(colors.neutral[getTypeShade(0)], 0)} 0%,
+                  ${alpha(colors.neutral[getTypeShade(0)], 0)} 87.5%,
                   ${alpha(
                       colors.neutral[getTypeShade(0)],
                       this.getOpacity(this.ref)
