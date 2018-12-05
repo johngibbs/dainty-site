@@ -13,7 +13,6 @@
     "rc-slider": "8.6.3",
     "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-share": "2.4.0",
     "react-syntax-highlighter": "10.1.1"
   }
 }
