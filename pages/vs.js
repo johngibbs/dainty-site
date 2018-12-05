@@ -142,7 +142,7 @@ yarn
       </Text>
     </Section>
     <Section>
-      <Heading level={2}>Addititonal extensions</Heading>
+      <Heading level={2}>Additional extensions</Heading>
       <Text>
         These are some extensions that improve the aestetics of Visual Studio:
       </Text>
@@ -152,12 +152,12 @@ yarn
             Indent Guides
           </Anchor>
         </ListItem>
-        <ListItem listStyle="–">Line Press</ListItem>
         <ListItem listStyle="–">
           <Anchor href="https://marketplace.visualstudio.com/items?itemName=OmarRwemi.BetterComments">
             Better Comments
           </Anchor>
         </ListItem>
+        <ListItem listStyle="–">Line Press</ListItem>
       </List>
       <Text>
         To make Indent Guides behave similar to Visual Studio Code, highlighting
