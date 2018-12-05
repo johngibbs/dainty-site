@@ -215,9 +215,14 @@ class Preview extends React.Component {
             </Section>
             <Section>
               <Heading level={2}>Use this configuration</Heading>
-              <CodeSection>
-                {this.getConfiguration(lightnessStart, lightnessEnd, chroma)}
-              </CodeSection>
+              <SyntaxHighlighterContainer>
+                <SyntaxHighlighter
+                  language="javascript"
+                  style={getCustomizations(colors, getTypeShade, getTokenColor)}
+                >
+                  {this.getConfiguration(lightnessStart, lightnessEnd, chroma)}
+                </SyntaxHighlighter>
+              </SyntaxHighlighterContainer>
               <Subsection>
                 <List listStyle="–">
                   <ListItem listStyle="–">
