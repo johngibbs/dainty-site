@@ -214,7 +214,9 @@ class Preview extends React.Component {
               </SyntaxHighlighterContainer>
             </Section>
             <Section>
-              <Heading level={2}>Use this configuration</Heading>
+              <Heading level={2}>
+                <Code>`configuration.jsonc`</Code>
+              </Heading>
               <SyntaxHighlighterContainer>
                 <SyntaxHighlighter
                   language="javascript"
