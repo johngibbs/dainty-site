@@ -50,7 +50,7 @@ export const SiteContainer = props => (
 
           @media (min-width: 1024px) {
             * {
-              transition: background-color 0.25s ease;
+              transition: background-color 0.375s ease;
             }
           }
         `}</style>

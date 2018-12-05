@@ -70,7 +70,7 @@ export const ScreenshotContainer = props => (
 
           @media (min-width: 1024px) {
             div {
-              transition: opacity 0.25s ease;
+              transition: opacity 0.375s ease;
             }
           }
         `}</style>
