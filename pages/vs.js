@@ -82,12 +82,10 @@ const VS = props => (
     </Section> */}
     <Section>
       <Heading level={2}>Get it</Heading>
-      <Subsection>
-        <CodeSection>{`git clone https://github.com/alexanderte/dainty-vs.git
+      <CodeSection>{`git clone https://github.com/alexanderte/dainty-vs.git
 cd dainty-vs
 yarn
 `}</CodeSection>
-      </Subsection>
       <Subsection>
         <Heading level={3}>Build the theme</Heading>
         <CodeSection>{`yarn build`}</CodeSection>

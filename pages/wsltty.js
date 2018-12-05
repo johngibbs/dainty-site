@@ -67,12 +67,10 @@ const WSLtty = props => (
     </Section> */}
     <Section>
       <Heading level={2}>Get it</Heading>
-      <Subsection>
-        <CodeSection>{`git clone https://github.com/alexanderte/dainty-wsltty.git
+      <CodeSection>{`git clone https://github.com/alexanderte/dainty-wsltty.git
 cd dainty-wsltty
 yarn
 `}</CodeSection>
-      </Subsection>
       <Subsection>
         <Heading level={3}>WSLtty – Build and install the theme</Heading>
         <CodeSection>{`yarn build -i`}</CodeSection>
