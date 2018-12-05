@@ -65,9 +65,10 @@ class Preview extends React.Component {
     this.setState({ example: event.target.value });
   }
 
-  getConfiguration(lightnessStart, lightnessEnd, chroma) {
+  getConfiguration(preset, lightnessStart, lightnessEnd, chroma) {
     return `{
   "colors": {
+    "preset": "${changeCase.paramCase(preset)}",
     "_adjustments": {
       "lightnessStart": ${lightnessStart},
       "lightnessEnd": ${lightnessEnd},
@@ -222,7 +223,12 @@ class Preview extends React.Component {
                   language="javascript"
                   style={getCustomizations(colors, getTypeShade, getTokenColor)}
                 >
-                  {this.getConfiguration(lightnessStart, lightnessEnd, chroma)}
+                  {this.getConfiguration(
+                    preset,
+                    lightnessStart,
+                    lightnessEnd,
+                    chroma
+                  )}
                 </SyntaxHighlighter>
               </SyntaxHighlighterContainer>
               <Subsection>
@@ -236,18 +242,16 @@ class Preview extends React.Component {
                     <Code>`configuration.jsonc`</Code>
                   </ListItem>
                   <ListItem listStyle="–">
-                    Run{" "}
-                    <Code>`yarn build -p {changeCase.paramCase(preset)}`</Code>
+                    Run <Code>`yarn build -i`</Code>
                   </ListItem>
                 </List>
               </Subsection>
               <Subsection>
                 <Text small>
                   <i>
-                    The flag <Code>`-i`</Code> can be added to{" "}
-                    <Code>`yarn build`</Code> to install the color theme.
-                    However, this is currently not supported by{" "}
-                    <Code>`dainty-vs`</Code>.
+                    The <Code>`-i`</Code> flag installs the color theme. Running{" "}
+                    <Code>`yarn build`</Code> with <Code>-i</Code> is currently
+                    not supported by <Code>`dainty-vs`</Code>.
                   </i>
                 </Text>
               </Subsection>
