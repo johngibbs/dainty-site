@@ -113,14 +113,13 @@ yarn
           Tools → Import and Export Settings… → Import selected environment
           settings
         </ListItem>
-        <List listStyle="–">
+        <List listStyle="–" nested>
           <ListItem listStyle="–">
             Select <Code>`dainty.vssettings`</Code>
           </ListItem>
         </List>
       </List>
     </Section>
-
     <Section>
       <Heading level={2}>Configuration</Heading>
       <Text>

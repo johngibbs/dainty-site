@@ -416,6 +416,7 @@ export const CodeSection = props => (
             border: 1px solid ${colors.neutral[getTypeShade(6)]};
             padding: 16px 24px;
             margin-bottom: 32px;
+            overflow-x: auto;
           }
 
           code {
@@ -519,7 +520,8 @@ export const List = props => (
         <ul>{props.children}</ul>
         <style jsx>{`
           ul {
-            ${!props.nested && "margin-bottom: 16px"};
+            overflow-x: auto;
+            ${!props.nested && "margin-bottom: 32px"};
             ${props.nested && "margin-bottom: 16px"};
             list-style: none;
             ${props.listStyle &&
