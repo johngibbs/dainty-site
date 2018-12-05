@@ -1,15 +1,16 @@
 import React from "react";
 import { ColorsContext } from "../colors-context";
+import { ScrollContainer } from "./core";
 
 export const Table = props => (
   <React.Fragment>
-    <table>{props.children}</table>
+    <ScrollContainer marginBottom={32}>
+      <table>{props.children}</table>
+    </ScrollContainer>
     <style jsx>{`
       table {
         border-collapse: collapse;
         width: 100%;
-        overflow-x: auto;
-        margin-bottom: 32px;
       }
 
       @media (max-width: 1023.98px) {
@@ -50,6 +51,7 @@ export const Th = props => (
         text-align: left;
         font-weight: 400;
         padding: 16px;
+        white-space: nowrap;
       }
     `}</style>
   </React.Fragment>
@@ -61,6 +63,7 @@ export const Td = props => (
     <style jsx>{`
       td {
         padding: 16px;
+        white-space: nowrap;
       }
     `}</style>
   </React.Fragment>

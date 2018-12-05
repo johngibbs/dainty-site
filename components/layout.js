@@ -41,10 +41,6 @@ export const SiteContainer = props => (
             background-color: ${colors.neutral[getTypeShade(0)]};
           }
 
-          * {
-            transition: background-color 0.5s ease;
-          }
-
           * { margin: 0; padding: 0; box-sizing: border-box; }
         `}</style>
         </Head>

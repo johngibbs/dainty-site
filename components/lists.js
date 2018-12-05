@@ -1,19 +1,19 @@
 import React from "react";
 import { ColorsContext } from "../colors-context";
+import { ScrollContainer } from "./core";
 
 export const List = props => (
   <React.Fragment>
-    <ul>{props.children}</ul>
+    <ScrollContainer marginBottom={props.nested ? 16 : 32}>
+      <ul>{props.children}</ul>
+    </ScrollContainer>
     <style jsx>{`
       ul {
         display: flex;
-        overflow-x: auto;
         list-style: none;
         ${props.horizontal ? "flex-direction: row" : "flex-direction: column"};
         ${props.listStyle &&
           `padding-left: ${props.listStyle === "✓" ? "22px" : "18px"}`};
-        ${!props.nested && "margin-bottom: 32px"};
-        ${props.nested && "margin-bottom: 16px"};
       }
 
       @media (max-width: 1023.98px) {
@@ -55,7 +55,7 @@ export const ListItem = props => (
               margin-left: ${props.listStyle === "✓" ? "-22px" : "-18px"};
               color: ${
                 props.listStyle === "✓"
-                  ? colors.blueLessChroma[getTypeShade(24)]
+                  ? colors.neutral[getTypeShade(24)]
                   : colors.neutral[getTypeShade(16)]
               };
             `};

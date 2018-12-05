@@ -1,5 +1,6 @@
 import React from "react";
 import { ColorsContext } from "../colors-context";
+import { alpha } from "dainty-shared/src/colors";
 
 export const Text = props => (
   <React.Fragment>
@@ -160,3 +161,91 @@ export const Anchor = props => (
     )}
   </ColorsContext.Consumer>
 );
+
+export class ScrollContainer extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      scrollLeft: 0,
+      doesOverflow: null
+    };
+
+    this.scrollContainer = React.createRef();
+
+    this.onScroll = this.onScroll.bind(this);
+    this.getOpacity = this.getOpacity.bind(this);
+  }
+
+  onScroll(event) {
+    this.setState({ scrollLeft: event.target.scrollLeft });
+  }
+
+  getOpacity() {
+    return Math.max(1 - this.state.scrollLeft / 128, 0);
+  }
+
+  componentDidMount() {
+    const element = this.scrollContainer.current;
+
+    this.setState({
+      doesOverflow:
+        element.offsetHeight < element.scrollHeight ||
+        element.offsetWidth < element.scrollWidth
+    });
+  }
+
+  render() {
+    return (
+      <ColorsContext.Consumer>
+        {({ colors, getTypeShade }) => (
+          <React.Fragment>
+            <div className="container" onScroll={this.onScroll}>
+              <div
+                ref={this.scrollContainer}
+                className="scroll-container"
+                onScroll={this.onScroll}
+              >
+                {this.props.children}
+              </div>
+              {this.state.doesOverflow && <div className="fade" />}
+            </div>
+            <style jsx>{`
+              .container {
+                position: relative;
+                margin-bottom: ${this.props.marginBottom}px;
+                ${this.props.border && `border: ${this.props.border}`};
+              }
+
+              .scroll-container {
+                overflow-x: auto;
+                position: relative;
+                z-index: 10;
+              }
+
+              .fade {
+                pointer-events: none;
+                z-index: 11;
+                position: absolute;
+                background: linear-gradient(
+                  to right,
+                  rgba(0, 0, 0, 0) 0%,
+                  rgba(0, 0, 0, 0) 87.5%,
+                  ${alpha(
+                      colors.neutral[getTypeShade(0)],
+                      this.getOpacity(this.ref)
+                    )}
+                    100%
+                );
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+              }
+            `}</style>
+          </React.Fragment>
+        )}
+      </ColorsContext.Consumer>
+    );
+  }
+}

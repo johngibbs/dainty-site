@@ -68,7 +68,7 @@ export const GitHubCorner = () => (
             top: 0;
             border: 0;
             right: 0;
-            z-index: 1;
+            z-index: 100;
             transition: fill 0.1875s ease;
           }
 
