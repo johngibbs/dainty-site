@@ -406,11 +406,11 @@ export const CodeSection = props => (
   <ColorsContext.Consumer>
     {({ colors, getTypeShade }) => (
       <React.Fragment>
-            <code>{props.children}</code>
-          </pre>
-        </div>
+        <pre>
+          <code>{props.children}</code>
+        </pre>
         <style jsx>{`
-          div {
+          pre {
             border: 1px solid ${colors.neutral[getTypeShade(6)]};
             padding: 16px 24px;
             margin-bottom: 32px;
@@ -796,7 +796,11 @@ export const Anchor = props => (
   <ColorsContext.Consumer>
     {({ colors, getTypeShade }) => (
       <React.Fragment>
-        <a {...props}>{props.children}</a>
+        {props.href ? (
+          <a href={props.href}>{props.children}</a>
+        ) : (
+          <a onClick={props.onClick}>{props.children}</a>
+        )}
         <style jsx>{`
           a {
             color: ${colors.blueMoreChroma[getTypeShade(28)]};
