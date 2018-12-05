@@ -18,7 +18,7 @@ const Overview = () => (
       <Subsection>
         <Heading level={2}>Build parameters</Heading>
         <Text small>
-          This section describes the build parameters that can be passed to{" "}
+          This section describes the parameters that can be passed to{" "}
           <Code>`yarn build`</Code>.
         </Text>
       </Subsection>
