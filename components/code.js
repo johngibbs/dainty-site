@@ -33,7 +33,7 @@ export const CodeSection = props => (
 
           code {
             font-family: "overpass-mono";
-            font-size: 14px;
+            font-size: 13px;
             color: ${colors.purple[getTypeShade(32)]};
           }
         `}</style>
