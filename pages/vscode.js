@@ -47,18 +47,14 @@ const VSCode = props => (
     />
     <Section>
       <Heading level={2}>Get it</Heading>
-      <Text>
-        <CodeSection>{`git clone https://github.com/alexanderte/dainty-vscode.git
+      <CodeSection>{`git clone https://github.com/alexanderte/dainty-vscode.git
 cd dainty-vscode
 yarn
 `}</CodeSection>
-      </Text>
       <Heading level={3}>
         Install theme into your <Code>`settings.json`</Code>
       </Heading>
-      <Text>
-        <CodeSection>{`yarn build -i`}</CodeSection>
-      </Text>
+      <CodeSection>{`yarn build -i`}</CodeSection>
     </Section>
     <Section>
       <Heading level={2}>Configuration</Heading>

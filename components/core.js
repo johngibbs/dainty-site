@@ -406,8 +406,6 @@ export const CodeSection = props => (
   <ColorsContext.Consumer>
     {({ colors, getTypeShade }) => (
       <React.Fragment>
-        <div>
-          <pre>
             <code>{props.children}</code>
           </pre>
         </div>
