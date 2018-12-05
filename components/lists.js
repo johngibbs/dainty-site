@@ -4,9 +4,13 @@ import { ScrollContainer } from "./core";
 
 export const List = props => (
   <React.Fragment>
-    <ScrollContainer marginBottom={props.nested ? 16 : 32}>
+    {props.noScrollContainer ? (
       <ul>{props.children}</ul>
-    </ScrollContainer>
+    ) : (
+      <ScrollContainer marginBottom={props.nested ? 16 : 32}>
+        <ul>{props.children}</ul>
+      </ScrollContainer>
+    )}
     <style jsx>{`
       ul {
         display: flex;
@@ -14,6 +18,7 @@ export const List = props => (
         ${props.horizontal ? "flex-direction: row" : "flex-direction: column"};
         ${props.listStyle &&
           `padding-left: ${props.listStyle === "✓" ? "22px" : "18px"}`};
+        align-items: flex-start;
       }
 
       @media (max-width: 1023.98px) {
@@ -31,37 +36,66 @@ export const List = props => (
   </React.Fragment>
 );
 
-export const ListItem = props => (
-  <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
-      <React.Fragment>
-        <li>{props.children}</li>
-        <style jsx>{`
-          li {
-            flex: 0 0 auto;
-            ${props.horizontal && "margin-right: 64px"};
-          }
+export class ListItem extends React.Component {
+  constructor(props) {
+    super(props);
 
-          li:not(:last-child) {
-            ${!props.horizontal && "margin-bottom: 12px"};
-          }
+    this.state = {
+      isShaking: true
+    };
 
-          li:before {
-            ${props.listStyle &&
-              `
-              display: inline-block;
-              content: "${props.listStyle}";
-              width: ${props.listStyle === "✓" ? "22px" : "18px"};
-              margin-left: ${props.listStyle === "✓" ? "-22px" : "-18px"};
-              color: ${
-                props.listStyle === "✓"
-                  ? colors.neutral[getTypeShade(24)]
-                  : colors.neutral[getTypeShade(16)]
-              };
-            `};
-          }
-        `}</style>
-      </React.Fragment>
-    )}
-  </ColorsContext.Consumer>
-);
+    this.onMouseOver = this.onMouseOver.bind(this);
+  }
+
+  onMouseOver() {
+    this.setState({ isShaking: false });
+  }
+
+  render() {
+    return (
+      <ColorsContext.Consumer>
+        {({ colors, getTypeShade }) => (
+          <React.Fragment>
+            <li
+              className={
+                this.props.shake &&
+                this.state.isShaking &&
+                "shake-slow shake-constant"
+              }
+              onMouseOver={this.onMouseOver}
+            >
+              {this.props.children}
+            </li>
+            <style jsx>{`
+              li {
+                flex: 0 0 auto;
+                ${this.props.horizontal && "margin-right: 64px"};
+              }
+
+              li:not(:last-child) {
+                ${!this.props.horizontal && "margin-bottom: 12px"};
+              }
+
+              li:before {
+                ${this.props.listStyle &&
+                  `
+                display: inline-block;
+                content: "${this.props.listStyle}";
+                width: ${this.props.listStyle === "✓" ? "22px" : "18px"};
+                margin-left: ${
+                  this.props.listStyle === "✓" ? "-22px" : "-18px"
+                };
+                color: ${
+                  this.props.listStyle === "✓"
+                    ? colors.neutral[getTypeShade(24)]
+                    : colors.neutral[getTypeShade(16)]
+                };
+              `};
+              }
+            `}</style>
+          </React.Fragment>
+        )}
+      </ColorsContext.Consumer>
+    );
+  }
+}

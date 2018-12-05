@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Code, CodeSection } from "../components/code";
-import { Heading, Text, Anchor, Bold } from "../components/core";
+import { Heading, Text, Anchor, Bold, Shake } from "../components/core";
 import { List, ListItem } from "../components/lists";
 import { Section, Subsection } from "../components/layout";
 import { ScreenshotSection } from "../components/screenshots";
@@ -48,15 +48,13 @@ const VS = props => (
     />
     <Section>
       <Heading level={2}>Prerequisites</Heading>
-      <List listStyle="–">
+      <List listStyle="–" noScrollContainer>
         <ListItem listStyle="–">Visual Studio 2017</ListItem>
-        <ListItem listStyle="–">
-          <Bold>
-            <Anchor href="https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor">
-              Color Theme Editor
-            </Anchor>{" "}
-            extension
-          </Bold>
+        <ListItem listStyle="–" shake>
+          <Anchor href="https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor">
+            Color Theme Editor
+          </Anchor>
+          &nbsp;extension
         </ListItem>
       </List>
     </Section>
