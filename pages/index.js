@@ -19,7 +19,7 @@ const Overview = () => (
             <Bold>CIELAB color space</Bold>
           </ListItem>
           <ListItem listStyle="–">
-            With a <Bold>single preset definition</Bold>, a color theme can be
+            With a <Bold>unified preset definition</Bold>, a color theme can be
             built for each supported application
           </ListItem>
           <ListItem listStyle="–">
