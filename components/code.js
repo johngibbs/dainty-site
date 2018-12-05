@@ -39,6 +39,7 @@ export const CodeSection = props => (
           pre {
             padding: 16px 24px;
             width: 100%;
+            line-height: 1.5;
           }
 
           code {
