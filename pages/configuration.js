@@ -1,5 +1,5 @@
 import { Section, Subsection } from "../components/layout";
-import { Heading, Anchor, Text, Small } from "../components/core";
+import { Heading, Anchor, Text } from "../components/core";
 import { Code, CodeSection } from "../components/code";
 import { Table, Tr, Th, Td } from "../components/tables";
 
@@ -17,11 +17,9 @@ const Overview = () => (
     <Section>
       <Subsection>
         <Heading level={2}>Build parameters</Heading>
-        <Text>
-          <Small>
-            This section describes the build parameters that can be passed to{" "}
-            <Code>`yarn build`</Code>.
-          </Small>
+        <Text small>
+          This section describes the build parameters that can be passed to{" "}
+          <Code>`yarn build`</Code>.
         </Text>
       </Subsection>
       <Subsection>
@@ -29,15 +27,13 @@ const Overview = () => (
           <Code>-p</Code> <Code token="punctuation">&nbsp;|&nbsp;</Code>{" "}
           <Code>--preset</Code>
         </Heading>
-        <Text>
-          <Small>
-            Presets are configuration files that can be used in addition to
-            <Code>`configuration.jsonc`</Code>. They are intended for turning
-            Dainty into another color theme. Presets are located in the{" "}
-            <Code>`presets`</Code> directory of the shared repository and can be
-            activated by using <Code>`-p &lt;preset&gt;`</Code> or
-            <Code>`--preset &lt;preset&gt;`</Code>:
-          </Small>
+        <Text small>
+          Presets are configuration files that can be used in addition to
+          <Code>`configuration.jsonc`</Code>. They are intended for turning
+          Dainty into another color theme. Presets are located in the{" "}
+          <Code>`presets`</Code> directory of the shared repository and can be
+          activated by using <Code>`-p &lt;preset&gt;`</Code> or
+          <Code>`--preset &lt;preset&gt;`</Code>:
         </Text>
         <CodeSection>yarn build -p dainty-light</CodeSection>
       </Subsection>
@@ -46,9 +42,7 @@ const Overview = () => (
           <Code>-i</Code> <Code token="punctuation">&nbsp;|&nbsp;</Code>{" "}
           <Code>--install</Code>
         </Heading>
-        <Text>
-          <Small>Installs Dainty if supported by generator.</Small>
-        </Text>
+        <Text small>Installs Dainty if supported by generator.</Text>
         <CodeSection>yarn build -i</CodeSection>
       </Subsection>
       <Subsection>
@@ -56,32 +50,26 @@ const Overview = () => (
           <Code>-d</Code> <Code token="punctuation">&nbsp;|&nbsp;</Code>{" "}
           <Code>--deactivate</Code>
         </Heading>
-        <Text>
-          <Small>Deactivates Dainty if supported by generator.</Small>
-        </Text>
+        <Text small>Deactivates Dainty if supported by generator.</Text>
         <CodeSection>yarn build -d</CodeSection>
       </Subsection>
     </Section>
     <Section>
       <Heading level={2}>User configuration</Heading>
       <Subsection>
-        <Text>
-          <Small>
-            If a property is set in both <Code>`configuration.jsonc`</Code> and
-            the preset configuration, then the one in{" "}
-            <Code>`configuration.jsonc`</Code> is used.
-          </Small>
+        <Text small>
+          If a property is set in both <Code>`configuration.jsonc`</Code> and
+          the preset configuration, then the one in{" "}
+          <Code>`configuration.jsonc`</Code> is used.
         </Text>
       </Subsection>
       <Subsection>
         <Heading level={3}>
           <Code>`preset`</Code> (<Code>`string`</Code>)
         </Heading>
-        <Text>
-          <Small>
-            Preset to use if no preset is specified. Defaults to{" "}
-            <Code>`dainty-dark`</Code>.
-          </Small>
+        <Text small>
+          Preset to use if no preset is specified. Defaults to{" "}
+          <Code>`dainty-dark`</Code>.
         </Text>
       </Subsection>
       <Subsection>
@@ -158,36 +146,28 @@ const Overview = () => (
     <Section>
       <Subsection>
         <Heading level={2}>Preset configuration</Heading>
-        <Text>
-          <Small>
-            The following properties are intended to be set only by presets.
-          </Small>
+        <Text small>
+          The following properties are intended to be set only by presets.
         </Text>
         <Heading level={3}>
           <Code>`type`</Code> (<Code>string</Code>)
         </Heading>
-        <Text>
-          <Small>
-            Type of preset. Can either be <Code>`dark`</Code> or{" "}
-            <Code>`light`</Code>.
-          </Small>
+        <Text small>
+          Type of preset. Can either be <Code>`dark`</Code> or{" "}
+          <Code>`light`</Code>.
         </Text>
       </Subsection>
       <Subsection>
         <Heading level={3}>
           <Code>`name`</Code> (<Code>string</Code>)
         </Heading>
-        <Text>
-          <Small>Name of the preset</Small>.
-        </Text>
+        <Text small>Name of the preset.</Text>
       </Subsection>
       <Subsection>
         <Heading level={3}>
           <Code>`description`</Code> (<Code>string</Code>)
         </Heading>
-        <Text>
-          <Small>Description of the preset.</Small>
-        </Text>
+        <Text small>Description of the preset.</Text>
       </Subsection>
       <Subsection>
         <Heading level={3}>
@@ -266,17 +246,15 @@ const Overview = () => (
           </Code>{" "}
           (<Code>object</Code>)
         </Heading>
-        <Text>
-          <Small>
-            With a provided base color a scale of 41 shades is built. When color
-            is expressed as hex as opposed to hue and chroma, the color will be
-            converted to LCh and its hue and chroma are used while the lightness
-            is calculated. See{" "}
-            <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/presets/dainty-dark.jsonc">
-              <Code>`dainty-dark.jsonc`</Code>
-            </Anchor>{" "}
-            for all available colors.
-          </Small>
+        <Text small>
+          With a provided base color a scale of 41 shades is built. When color
+          is expressed as hex as opposed to hue and chroma, the color will be
+          converted to LCh and its hue and chroma are used while the lightness
+          is calculated. See{" "}
+          <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/presets/dainty-dark.jsonc">
+            <Code>`dainty-dark.jsonc`</Code>
+          </Anchor>{" "}
+          for all available colors.
         </Text>
         <Table>
           <thead>
@@ -369,15 +347,13 @@ const Overview = () => (
           </Code>{" "}
           (<Code>object</Code>)
         </Heading>
-        <Text>
-          <Small>
-            See{" "}
-            <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/presets/dainty-dark.jsonc">
-              <Code>`dainty-dark.jsonc`</Code>
-            </Anchor>{" "}
-            for all available properties. Value can be either a Dainty color
-            constant or a hex color value.
-          </Small>
+        <Text small>
+          See{" "}
+          <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/presets/dainty-dark.jsonc">
+            <Code>`dainty-dark.jsonc`</Code>
+          </Anchor>{" "}
+          for all available properties. Value can be either a Dainty color
+          constant or a hex color value.
         </Text>
       </Subsection>
       <Subsection>
@@ -387,15 +363,13 @@ const Overview = () => (
           </Code>{" "}
           (<Code>object</Code>)
         </Heading>
-        <Text>
-          <Small>
-            See{" "}
-            <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/presets/dainty-dark.jsonc">
-              <Code>`dainty-dark.jsonc`</Code>
-            </Anchor>{" "}
-            for all available properties. Value can be either a Dainty color
-            constant or a hex color value.
-          </Small>
+        <Text small>
+          See{" "}
+          <Anchor href="https://github.com/alexanderte/dainty-shared/blob/master/presets/dainty-dark.jsonc">
+            <Code>`dainty-dark.jsonc`</Code>
+          </Anchor>{" "}
+          for all available properties. Value can be either a Dainty color
+          constant or a hex color value.
         </Text>
       </Subsection>
     </Section>
