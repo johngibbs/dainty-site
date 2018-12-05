@@ -24,6 +24,25 @@ export const Text = props => (
   </React.Fragment>
 );
 
+export const Small = props => (
+  <React.Fragment>
+    <small>{props.children}</small>
+    <style jsx>{`
+      @media (max-width: 1023.98px) {
+        small {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        small {
+          font-size: 15px;
+        }
+      }
+    `}</style>
+  </React.Fragment>
+);
+
 export const Bold = props => (
   <React.Fragment>
     <b>{props.children}</b>
