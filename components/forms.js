@@ -52,19 +52,15 @@ export const Option = props => (
 );
 
 export const Label = props => (
-  <ColorsContext.Consumer>
-    {() => (
-      <React.Fragment>
-        <label {...props}>{props.children}</label>
-        <style jsx>{`
-          label {
-            margin-bottom: 8px;
-            font-size: 14px;
-          }
-        `}</style>
-      </React.Fragment>
-    )}
-  </ColorsContext.Consumer>
+  <React.Fragment>
+    <label {...props}>{props.children}</label>
+    <style jsx>{`
+      label {
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+    `}</style>
+  </React.Fragment>
 );
 
 export const Button = props => (

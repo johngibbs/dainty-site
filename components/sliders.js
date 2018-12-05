@@ -7,7 +7,7 @@ export const Slider = props => {
     <ColorsContext.Consumer>
       {({ colors, getTypeShade }) => (
         <React.Fragment>
-          <RcSlider style={{ marginBottom: 16 }} {...props} />
+          <RcSlider {...props} />
           <style jsx global>{`
             .rc-slider {
               position: relative;
@@ -19,11 +19,14 @@ export const Slider = props => {
               touch-action: none;
               box-sizing: border-box;
               -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+              margin-bottom: 16px;
             }
+
             .rc-slider * {
               box-sizing: border-box;
               -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             }
+
             .rc-slider-rail {
               position: absolute;
               width: 100%;
@@ -31,6 +34,7 @@ export const Slider = props => {
               height: 4px;
               border-radius: 6px;
             }
+
             .rc-slider-track {
               position: absolute;
               left: 0;
@@ -38,6 +42,7 @@ export const Slider = props => {
               border-radius: 6px;
               background-color: ${colors.neutral[getTypeShade(12)]};
             }
+
             .rc-slider-handle {
               position: absolute;
               margin-left: -7px;
@@ -53,24 +58,29 @@ export const Slider = props => {
               -ms-touch-action: pan-x;
               touch-action: pan-x;
             }
+
             .rc-slider-handle:focus {
               border-color: ${colors.neutral[getTypeShade(20)]};
               box-shadow: 0 0 0 1px ${colors.blueLessChroma[getTypeShade(16)]};
               outline: none;
             }
+
             .rc-slider-handle-click-focused:focus {
               border-color: ${colors.neutral[getTypeShade(16)]};
               box-shadow: unset;
             }
+
             .rc-slider-handle:hover {
               border-color: ${colors.neutral[getTypeShade(20)]};
             }
+
             .rc-slider-handle:active {
               border-color: ${colors.neutral[getTypeShade(20)]};
               box-shadow: 0 0 1px ${colors.blueLessChroma[getTypeShade(20)]};
               cursor: -webkit-grabbing;
               cursor: grabbing;
             }
+
             .rc-slider-mark {
               position: absolute;
               top: 18px;
@@ -78,6 +88,7 @@ export const Slider = props => {
               width: 100%;
               font-size: 12px;
             }
+
             .rc-slider-mark-text {
               position: absolute;
               display: inline-block;
@@ -86,15 +97,18 @@ export const Slider = props => {
               cursor: pointer;
               color: #999;
             }
+
             .rc-slider-mark-text-active {
               color: #666;
             }
+
             .rc-slider-step {
               position: absolute;
               width: 100%;
               height: 4px;
               background: transparent;
             }
+
             .rc-slider-dot {
               position: absolute;
               bottom: -2px;
@@ -107,6 +121,7 @@ export const Slider = props => {
               border-radius: 50%;
               vertical-align: middle;
             }
+
             .rc-slider-dot-active {
               border-color: #96dbfa;
             }

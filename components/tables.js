@@ -3,28 +3,23 @@ import { ColorsContext } from "../colors-context";
 
 export const Table = props => (
   <React.Fragment>
-    <div>
-      <table>{props.children}</table>
-    </div>
+    <table>{props.children}</table>
     <style jsx>{`
-      div {
+      table {
+        border-collapse: collapse;
+        width: 100%;
         overflow-x: auto;
         margin-bottom: 32px;
       }
 
-      table {
-        border-collapse: collapse;
-        width: 100%;
-      }
-
       @media (max-width: 1023.98px) {
-        div {
+        table {
           font-size: 14px;
         }
       }
 
       @media (min-width: 1024px) {
-        div {
+        table {
           font-size: 15px;
         }
       }
@@ -48,29 +43,25 @@ export const Tr = props => (
 );
 
 export const Th = props => (
-  <ColorsContext.Consumer>
-    {() => (
-      <React.Fragment>
-        <th>{props.children}</th>
-        <style jsx>{`
-          text-align: left;
-          font-weight: 400;
-          padding: 16px;
-        `}</style>
-      </React.Fragment>
-    )}
-  </ColorsContext.Consumer>
+  <React.Fragment>
+    <th>{props.children}</th>
+    <style jsx>{`
+      th {
+        text-align: left;
+        font-weight: 400;
+        padding: 16px;
+      }
+    `}</style>
+  </React.Fragment>
 );
 
 export const Td = props => (
-  <ColorsContext.Consumer>
-    {() => (
-      <React.Fragment>
-        <td>{props.children}</td>
-        <style jsx>{`
-          padding: 16px;
-        `}</style>
-      </React.Fragment>
-    )}
-  </ColorsContext.Consumer>
+  <React.Fragment>
+    <td>{props.children}</td>
+    <style jsx>{`
+      td {
+        padding: 16px;
+      }
+    `}</style>
+  </React.Fragment>
 );

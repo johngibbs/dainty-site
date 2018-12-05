@@ -74,21 +74,17 @@ export const ScreenshotContainer = props => (
 );
 
 export const Screenshot = props => (
-  <ColorsContext.Consumer>
-    {() => (
-      <React.Fragment>
-        <img src={props.src} />
-        <style jsx>{`
-          img {
-            left: 0;
-            top: 0;
-            width: 100%;
-            transition: opacity 0.5s ease;
-            ${props.first ? "position: relative" : "position: absolute"};
-            ${!props.visible && "opacity: 0"};
-          }
-        `}</style>
-      </React.Fragment>
-    )}
-  </ColorsContext.Consumer>
+  <React.Fragment>
+    <img src={props.src} />
+    <style jsx>{`
+      img {
+        left: 0;
+        top: 0;
+        width: 100%;
+        transition: opacity 0.5s ease;
+        ${props.first ? "position: relative" : "position: absolute"};
+        ${!props.visible && "opacity: 0"};
+      }
+    `}</style>
+  </React.Fragment>
 );
