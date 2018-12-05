@@ -13,13 +13,16 @@ import elixir from "react-syntax-highlighter/dist/cjs/languages/prism/elixir";
 import { presets } from "dainty-shared/presets-web";
 import { examples } from "../examples";
 
-import { Code } from "../components/code";
+import {
+  Code,
+  CodeSection,
+  SyntaxHighlighterContainer
+} from "../components/code";
 import { Heading, Text } from "../components/core";
 import { List, ListItem } from "../components/lists";
 import { Section, Subsection } from "../components/layout";
 import { Select, Label, Option } from "../components/forms";
 import { Slider } from "../components/sliders";
-import { SyntaxHighlighterContainer } from "../components/code";
 
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("csharp", csharp);
@@ -212,6 +215,9 @@ class Preview extends React.Component {
             </Section>
             <Section>
               <Heading level={2}>Use this configuration</Heading>
+              <CodeSection>
+                {this.getConfiguration(lightnessStart, lightnessEnd, chroma)}
+              </CodeSection>
               <Subsection>
                 <List listStyle="–">
                   <ListItem listStyle="–">
@@ -219,7 +225,7 @@ class Preview extends React.Component {
                     <Code>`dainty-&lt;application&gt;`</Code>
                   </ListItem>
                   <ListItem listStyle="–">
-                    Copy the configuration below to{" "}
+                    Copy the configuration above to{" "}
                     <Code>`configuration.jsonc`</Code>
                   </ListItem>
                   <ListItem listStyle="–">
@@ -237,24 +243,6 @@ class Preview extends React.Component {
                     <Code>`dainty-vs`</Code>.
                   </i>
                 </Text>
-              </Subsection>
-              <Subsection>
-                <SyntaxHighlighterContainer>
-                  <SyntaxHighlighter
-                    language="javascript"
-                    style={getCustomizations(
-                      colors,
-                      getTypeShade,
-                      getTokenColor
-                    )}
-                  >
-                    {this.getConfiguration(
-                      lightnessStart,
-                      lightnessEnd,
-                      chroma
-                    )}
-                  </SyntaxHighlighter>
-                </SyntaxHighlighterContainer>
               </Subsection>
             </Section>
           </>
