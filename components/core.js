@@ -458,7 +458,7 @@ export const HorizontalRule = props => (
           hr {
             border: 0;
             border-bottom: 1px solid ${colors.neutral[getTypeShade(6)]};
-            margin-bottom: 64px;
+            margin: 64px 0;
           }
         `}</style>
       </React.Fragment>
@@ -505,6 +505,7 @@ export const Page = props => (
 
           @media (min-width: 1760px) {
             div {
+              transform: translateX(-64px);
             }
           }
         `}</style>
@@ -534,13 +535,13 @@ export const List = props => (
 
           @media (max-width: 1023.98px) {
             ul {
-              font-size: 15px;
+              ${props.small && "font-size: 15px;"};
             }
           }
 
           @media (min-width: 1024px) {
             ul {
-              font-size: 16px;
+              ${props.small && "font-size: 16px;"};
             }
           }
         `}</style>
@@ -822,7 +823,7 @@ export const Sidebar = withRouter(({ router }) => (
         <div className="sidebar">
           <Subsection>
             <Heading level={3}>Dainty</Heading>
-            <List>
+            <List small>
               <ListItem>
                 <Link href="/">
                   <Anchor active={router.pathname === "/"}>Overview</Anchor>
@@ -846,7 +847,7 @@ export const Sidebar = withRouter(({ router }) => (
           </Subsection>
           <Subsection>
             <Heading level={3}>Applications</Heading>
-            <List>
+            <List small>
               <ListItem>
                 <Link href="/vscode" prefetch>
                   <Anchor active={router.pathname === "/vscode"}>
