@@ -915,7 +915,7 @@ export const Content = props => (
                 </Anchor>
               </ListItem>
               <ListItem horizontal>
-                <Anchor href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//dainty.site&title=Make%20your%20code%20look%20dainty.%20Use%Dainty%20😏.&summary=&source=">
+                <Anchor href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//dainty.site&amp;title=Make%20your%20code%20look%20dainty.%20Use%Dainty%20😏.&amp;summary=&amp;source=">
                   <Small>Share on LinkedIn</Small>
                 </Anchor>
               </ListItem>
