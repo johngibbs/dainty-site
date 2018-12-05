@@ -33,8 +33,19 @@ export const CodeSection = props => (
 
           code {
             font-family: "overpass-mono";
-            font-size: 13px;
             color: ${colors.purple[getTypeShade(32)]};
+          }
+
+          @media (max-width: 1023.98px) {
+            code {
+              font-size: 12px;
+            }
+          }
+
+          @media (min-width: 1024px) {
+            code {
+              font-size: 13px;
+            }
           }
         `}</style>
       </React.Fragment>
