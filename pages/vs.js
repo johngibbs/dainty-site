@@ -176,8 +176,8 @@ yarn
         <Anchor href="https://github.com/source-foundry/font-line">
           <Code>font-line</Code>
         </Anchor>{" "}
-        to modify the line spacing of fonts. For Fira Code, adding 50% seems
-        like a good place to start.
+        to modify the line spacing of fonts. For Fira Code, somewhere around 50%
+        might work.
       </Text>
     </Section>
   </>
