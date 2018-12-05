@@ -1,14 +1,7 @@
-import {
-  Heading,
-  Text,
-  Section,
-  Subsection,
-  List,
-  ListItem,
-  Anchor,
-  Bold
-} from "../components/core";
 import Link from "next/link";
+import { Section, Subsection } from "../components/layout";
+import { Heading, Anchor, Text, Bold } from "../components/core";
+import { List, ListItem } from "../components/lists";
 
 const Overview = () => (
   <>

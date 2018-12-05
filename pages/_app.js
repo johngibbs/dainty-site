@@ -7,7 +7,7 @@ import {
   getTypeShadeFunction
 } from "dainty-shared/src/colors";
 import { presets } from "dainty-shared/presets-web";
-import { Page, SiteContainer, Content, Sidebar } from "../components/core";
+import { Page, SiteContainer, Content, Sidebar } from "../components/layout";
 import { ColorsContext } from "../colors-context";
 
 export default class MyApp extends App {

@@ -1,18 +1,9 @@
 import Link from "next/link";
-import {
-  Heading,
-  Section,
-  List,
-  ListItem,
-  Anchor,
-  Text,
-  Code,
-  Bold,
-  Button,
-  Subsection,
-  CodeSection,
-  ScreenshotSection
-} from "../components/core";
+import { Code, CodeSection } from "../components/code";
+import { Heading, Text, Anchor, Bold } from "../components/core";
+import { List, ListItem } from "../components/lists";
+import { Section, Subsection } from "../components/layout";
+import { ScreenshotSection } from "../components/screenshots";
 import { screenshots } from "../screenshots";
 
 const VS = props => (

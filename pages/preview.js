@@ -3,35 +3,29 @@ import changeCase from "change-case";
 import { ColorsContext } from "../colors-context";
 import { getCustomizations } from "../customizations";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import csharp from "react-syntax-highlighter/dist/cjs/languages/prism/csharp";
 import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
 import css from "react-syntax-highlighter/dist/cjs/languages/prism/css";
 import elixir from "react-syntax-highlighter/dist/cjs/languages/prism/elixir";
 
+import { presets } from "dainty-shared/presets-web";
+import { examples } from "../examples";
+
+import { Code } from "../components/code";
+import { Heading, Text } from "../components/core";
+import { List, ListItem } from "../components/lists";
+import { Section, Subsection } from "../components/layout";
+import { Select, Label, Option } from "../components/forms";
+import { Slider } from "../components/sliders";
+import { SyntaxHighlighterContainer } from "../components/code";
+
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 SyntaxHighlighter.registerLanguage("csharp", csharp);
 SyntaxHighlighter.registerLanguage("python", python);
 SyntaxHighlighter.registerLanguage("css", css);
 SyntaxHighlighter.registerLanguage("elixir", elixir);
-
-import { presets } from "dainty-shared/presets-web";
-import { examples } from "../examples";
-
-import {
-  Heading,
-  Select,
-  Label,
-  Slider,
-  Section,
-  Option,
-  Text,
-  Code,
-  List,
-  ListItem,
-  SyntaxHighlighterContainer,
-  Subsection
-} from "../components/core";
 
 class Preview extends React.Component {
   constructor(props) {

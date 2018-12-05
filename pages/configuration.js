@@ -1,17 +1,7 @@
-import {
-  Heading,
-  Text,
-  Section,
-  Anchor,
-  Code,
-  CodeSection,
-  Subsection,
-  Table,
-  Tr,
-  Th,
-  Td,
-  Small
-} from "../components/core";
+import { Section, Subsection } from "../components/layout";
+import { Heading, Anchor, Text, Small } from "../components/core";
+import { Code, CodeSection } from "../components/code";
+import { Table, Tr, Th, Td } from "../components/tables";
 
 const Overview = () => (
   <>
