@@ -12,7 +12,7 @@ const Overview = () => (
         schema defined for each application. Properties such as{" "}
         <Code>`colors`</Code> and <Code>`customizations`</Code> are shared among
         all schemas. Also, Dainty for each application supports configuration
-        presets, intended for defining color theme.
+        presets, intended for defining color themes.
       </Text>
     </Section>
     <Section>
