@@ -8,10 +8,11 @@ const Overview = () => (
     <Section>
       <Heading level={1}>Dainty – Configuration</Heading>
       <Text>
-        Dainty has a unique configuration schema defined for each application.
-        Properties such as <Code>`colors`</Code> and{" "}
-        <Code>`customizations`</Code> are shared among all schemas. Dainty for
-        each application supports configuration presets.
+        Dainty has extensive configuration capabilities. A unique configuration
+        schema defined for each application. Properties such as{" "}
+        <Code>`colors`</Code> and <Code>`customizations`</Code> are shared among
+        all schemas. Also, Dainty for each application supports configuration
+        presets, intended for defining color theme.
       </Text>
     </Section>
     <Section>
@@ -29,8 +30,7 @@ const Overview = () => (
         </Heading>
         <Text small>
           Presets are configuration files that can be used in addition to
-          <Code>`configuration.jsonc`</Code>. They are intended for turning
-          Dainty into another color theme. Presets are located in the{" "}
+          <Code>`configuration.jsonc`</Code>. Presets are located in the{" "}
           <Code>`presets`</Code> directory of the shared repository and can be
           activated by using <Code>`-p &lt;preset&gt;`</Code> or
           <Code>`--preset &lt;preset&gt;`</Code>:
