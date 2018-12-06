@@ -235,12 +235,12 @@ export const Content = props => (
         <Heading level={3}>Share</Heading>
         <List horizontal>
           <ListItem horizontal>
-            <Anchor href="https://twitter.com/home?status=Dainty%20–%20A%20delicious%20color%20theme%20generator%20using%20Lab%20https%3A//dainty.site">
+            <Anchor href="https://twitter.com/home?status=Dainty%20–%20A%20delicious%20color%20theme%20generator%20using%20Lab%20color%20space%20–%20https%3A//dainty.site">
               <Small>Share on Twitter</Small>
             </Anchor>
           </ListItem>
           <ListItem horizontal>
-            <Anchor href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//dainty.site&amp;title=Dainty%20–%20A%20delicious%20color%20theme%20generator%20using%20Lab&amp;summary=&amp;source=">
+            <Anchor href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//dainty.site&amp;title=Dainty%20–%20A%20delicious%20color%20theme%20generator%20using%20Lab%20color%20space">
               <Small>Share on LinkedIn</Small>
             </Anchor>
           </ListItem>
