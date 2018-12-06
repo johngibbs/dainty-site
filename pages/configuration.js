@@ -335,7 +335,7 @@ const Overview = () => (
               <Td>
                 <Code>`number`</Code>
               </Td>
-              <Td>Hue as CIELAB hue in range 0–360</Td>
+              <Td>Hue in range 0–360</Td>
             </Tr>
           </tbody>
         </Table>

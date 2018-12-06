@@ -16,7 +16,7 @@ const Overview = () => (
         <List listStyle="–">
           <ListItem listStyle="–">
             Colors are processed and can be defined within the{" "}
-            <Bold>CIELAB color space</Bold>
+            <Bold>Lab color space</Bold>
           </ListItem>
           <ListItem listStyle="–">
             With a <Bold>unified preset definition</Bold>, a color theme can be
@@ -41,7 +41,7 @@ const Overview = () => (
         <Text>
           <Bold>Dainty Light</Bold> and <Bold>Dainty Dark</Bold> are the default
           presets of Dainty. They’re balanced and refined color themes using
-          carefully selected colors within the CIELAB color space. They are
+          carefully selected colors within the Lab color space. They are
           designed to <Bold>maximize readability</Bold> and{" "}
           <Bold>reduce eye strain</Bold>. Dainty also comes with presets based
           on <Bold>popular themes</Bold> such as Night Owl, or even things like

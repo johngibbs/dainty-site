@@ -25,12 +25,12 @@ export const SiteContainer = props => (
           <title>Dainty</title>
           <meta
             name="description"
-            content="Dainty is a color theme generator. Dainty Light and Dainty Dark are the default presets of Dainty. They’re balanced and refined color themes using carefully selected colors within the CIELAB color space."
+            content="Dainty is a color theme generator. Dainty Light and Dainty Dark are the default presets of Dainty. They’re balanced and refined color themes using carefully selected colors within the Lab color space."
           />
           <meta property="og:title" content="Dainty for Visual Studio" />
           <meta
             property="og:description"
-            content="Dainty is a color theme generator. Dainty Light and Dainty Dark are the default presets of Dainty. They’re balanced and refined color themes using carefully selected colors within the CIELAB color space."
+            content="Dainty is a color theme generator. Dainty Light and Dainty Dark are the default presets of Dainty. They’re balanced and refined color themes using carefully selected colors within the Lab color space."
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <style>{`
@@ -235,12 +235,12 @@ export const Content = props => (
         <Heading level={3}>Share</Heading>
         <List horizontal>
           <ListItem horizontal>
-            <Anchor href="https://twitter.com/home?status=Dainty%20–%20A%20delicious%20color%20theme%20generator%20using%20CIELAB%20https%3A//dainty.site">
+            <Anchor href="https://twitter.com/home?status=Dainty%20–%20A%20delicious%20color%20theme%20generator%20using%20Lab%20https%3A//dainty.site">
               <Small>Share on Twitter</Small>
             </Anchor>
           </ListItem>
           <ListItem horizontal>
-            <Anchor href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//dainty.site&amp;title=Dainty%20–%20A%20delicious%20color%20theme%20generator%20using%20CIELAB&amp;summary=&amp;source=">
+            <Anchor href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//dainty.site&amp;title=Dainty%20–%20A%20delicious%20color%20theme%20generator%20using%20Lab&amp;summary=&amp;source=">
               <Small>Share on LinkedIn</Small>
             </Anchor>
           </ListItem>
