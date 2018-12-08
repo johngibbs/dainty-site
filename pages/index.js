@@ -19,24 +19,24 @@ const Overview = () => (
             <Bold>Lab color space</Bold>
           </ListItem>
           <ListItem listStyle="–">
+            The environment for each application is styled for a{" "}
+            <Bold>minimal yet usable look</Bold>
+          </ListItem>
+          <ListItem listStyle="–">
             With a <Bold>unified preset definition</Bold>, a color theme can be
             built for each supported application
+          </ListItem>
+          <ListItem listStyle="–">
+            <Bold>Importing VS Code themes</Bold> into Dainty presets are
+            supported
           </ListItem>
           <ListItem listStyle="–">
             Creating a preset requires <Bold>less effort</Bold> compared to
             theming an application the usual way
           </ListItem>
           <ListItem listStyle="–">
-            The environment for each application is styled for a{" "}
-            <Bold>minimal yet usable look</Bold>
-          </ListItem>
-          <ListItem listStyle="–">
             Dainty for each application supports{" "}
             <Bold>configuration using JSON</Bold>
-          </ListItem>
-          <ListItem listStyle="–">
-            <Bold>Importing VS Code themes</Bold> into Dainty presets are
-            supported
           </ListItem>
         </List>
       </Subsection>
