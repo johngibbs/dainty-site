@@ -117,10 +117,10 @@ export function getCustomizations(colors, getTypeShade, getTokenColor) {
       color: getTokenColor("keyword")
     },
     variable: {
-      color: getTokenColor("identifier")
+      color: getTokenColor("variable")
     },
     constant: {
-      color: getTokenColor("identifier")
+      color: getTokenColor("constant")
     },
     inserted: {
       color: "#36acaa"
@@ -156,7 +156,7 @@ export function getCustomizations(colors, getTypeShade, getTokenColor) {
     //   color: "#9a050f"
     // },
     selector: {
-      color: getTokenColor("identifier")
+      color: getTokenColor("propertyName")
     },
     // ".language-autohotkey .token.keyword": {
     //   color: "#00009f"
@@ -174,7 +174,7 @@ export function getCustomizations(colors, getTypeShade, getTokenColor) {
       color: getTokenColor("type")
     },
     ".language-json .token.property": {
-      color: getTokenColor("type")
+      color: getTokenColor("propertyName")
     },
     tag: {
       color: getTokenColor("type")
@@ -183,7 +183,7 @@ export function getCustomizations(colors, getTypeShade, getTokenColor) {
       color: getTokenColor("type")
     },
     property: {
-      color: getTokenColor("identifier")
+      color: getTokenColor("propertyName")
     },
     regex: {
       color: "#ff0000"
