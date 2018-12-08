@@ -3,97 +3,25 @@ export function getCustomizations(colors, getTypeShade, getTokenColor) {
 
   return {
     'code[class*="language-"]': {
-      // color: "#393A34",
       fontFamily:
         '"overpass-mono", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace',
-      // direction: "ltr",
-      // textAlign: "left",
-      // whiteSpace: "pre",
-      // wordSpacing: "normal",
-      // wordBreak: "normal",
       fontSize: 13
-      // lineHeight: 1.5,
-      // MozTabSize: "4",
-      // OTabSize: "4",
-      // tabSize: "4",
-      // WebkitHyphens: "none",
-      // MozHyphens: "none",
-      // msHyphens: "none",
-      // hyphens: "none"
     },
     'pre[class*="language-"]': {
-      // color: "#393A34",
-      // fontFamily:
-      // '"overpass-mono", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace',
-      // direction: "ltr",
-      // textAlign: "left",
-      // whiteSpace: "pre",
-      // wordSpacing: "normal",
-      // wordBreak: "normal",
-      // fontSize: "0.95em",
       lineHeight: 1.5,
-      // MozTabSize: "4",
-      // OTabSize: "4",
-      // tabSize: "4",
-      // WebkitHyphens: "none",
-      // MozHyphens: "none",
-      // msHyphens: "none",
-      // hyphens: "none",
-      // margin: ".5em 0",
-      // overflow: "auto",
-      // border: "1px solid #dddddd",
       backgroundColor: colors.neutral[getTypeShade(0)]
-    },
-    'pre[class*="language-"]::-moz-selection': {
-      background: "#C1DEF1"
-    },
-    'pre[class*="language-"] ::-moz-selection': {
-      background: "#C1DEF1"
-    },
-    'code[class*="language-"]::-moz-selection': {
-      background: "#C1DEF1"
-    },
-    'code[class*="language-"] ::-moz-selection': {
-      background: "#C1DEF1"
-    },
-    'pre[class*="language-"]::selection': {
-      background: "#C1DEF1"
-    },
-    'pre[class*="language-"] ::selection': {
-      background: "#C1DEF1"
-    },
-    'code[class*="language-"]::selection': {
-      background: "#C1DEF1"
-    },
-    'code[class*="language-"] ::selection': {
-      background: "#C1DEF1"
-    },
-    ':not(pre) > code[class*="language-"]': {
-      // padding: ".2em",
-      // paddingTop: "1px",
-      // paddingBottom: "1px",
-      // background: "#f8f8f8",
-      // border: "1px solid #dddddd"
     },
     comment: {
       color: getTokenColor("comment")
-      // fontStyle: "italic"
     },
     prolog: {
       color: getTokenColor("comment")
-      // fontStyle: "italic"
     },
     doctype: {
       color: getTokenColor("comment")
-      // fontStyle: "italic"
     },
     cdata: {
       color: getTokenColor("comment")
-      // fontStyle: "italic"
-    },
-    namespace: {
-      Opacity: "1"
-      // Opacity: ".7"
     },
     string: {
       color: getTokenColor("string")
@@ -114,16 +42,13 @@ export function getCustomizations(colors, getTypeShade, getTokenColor) {
       color: getTokenColor("number")
     },
     boolean: {
-      color: getTokenColor("keyword")
+      color: getTokenColor("literal")
     },
     variable: {
       color: getTokenColor("variable")
     },
     constant: {
       color: getTokenColor("constant")
-    },
-    inserted: {
-      color: "#36acaa"
     },
     atrule: {
       color: getTokenColor("keyword")
@@ -134,76 +59,35 @@ export function getCustomizations(colors, getTypeShade, getTokenColor) {
     "attr-value": {
       color: getTokenColor("string")
     },
-    // ".language-autohotkey .token.selector": {
-    //   color: "#0000ff"
-    // },
-    // ".language-json .token.boolean": {
-    //   color: "#0000ff"
-    // },
-    // ".language-json .token.number": {
-    //   color: "#0000ff"
-    // },
-    // 'code[class*="language-css"]': {
-    //   color: "#0000ff"
-    // },
     function: {
       color: getTokenColor("function")
     },
-    deleted: {
-      color: "#9a050f"
-    },
-    // ".language-autohotkey .token.tag": {
-    //   color: "#9a050f"
-    // },
     selector: {
-      color: getTokenColor("propertyName")
-    },
-    // ".language-autohotkey .token.keyword": {
-    //   color: "#00009f"
-    // },
-    important: {
-      fontWeight: "bold"
-    },
-    bold: {
-      fontWeight: "bold"
-    },
-    italic: {
-      fontStyle: "italic"
+      color: getTokenColor("otherType")
     },
     "class-name": {
       color: getTokenColor("type")
     },
     ".language-json .token.property": {
-      color: getTokenColor("propertyName")
+      color: getTokenColor("property")
     },
     tag: {
       color: getTokenColor("type")
     },
     "attr-name": {
-      color: getTokenColor("type")
+      color: getTokenColor("attributeName")
     },
     property: {
-      color: getTokenColor("propertyName")
+      color: getTokenColor("property")
     },
     regex: {
-      color: "#ff0000"
+      color: getTokenColor("regex")
     },
     entity: {
-      color: "#ff0000"
+      color: getTokenColor("type")
     },
     "directive.tag  .tag": {
-      background: "#ffff00",
-      color: "#393A34"
-    },
-    ".line-numbers .line-numbers-rows": {
-      borderRightColor: "#a5a5a5"
-    },
-    ".line-numbers-rows > span:before": {
-      color: "#2B91AF"
-    },
-    ".line-highlight": {
-      background:
-        "linear-gradient(to right, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0))"
+      color: getTokenColor("type")
     }
   };
 }

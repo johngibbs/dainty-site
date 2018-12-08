@@ -13,11 +13,7 @@ import elixir from "react-syntax-highlighter/dist/cjs/languages/prism/elixir";
 import { presets } from "dainty-shared/presets-web";
 import { examples } from "../examples";
 
-import {
-  Code,
-  CodeSection,
-  SyntaxHighlighterContainer
-} from "../components/code";
+import { Code, SyntaxHighlighterContainer } from "../components/code";
 import { Heading, Text } from "../components/core";
 import { List, ListItem } from "../components/lists";
 import { Section, Subsection } from "../components/layout";
