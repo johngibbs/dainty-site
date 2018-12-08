@@ -35,7 +35,7 @@ const Overview = () => (
             <Bold>configuration using JSON</Bold>
           </ListItem>
           <ListItem listStyle="–">
-            <Bold>Importing VS Code themes</Bold> into Dainty presets is
+            <Bold>Importing VS Code themes</Bold> into Dainty presets are
             supported
           </ListItem>
         </List>
