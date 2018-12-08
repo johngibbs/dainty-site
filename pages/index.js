@@ -34,6 +34,10 @@ const Overview = () => (
             Dainty for each application supports{" "}
             <Bold>configuration using JSON</Bold>
           </ListItem>
+          <ListItem listStyle="–">
+            <Bold>Importing VS Code themes</Bold> into Dainty presets is
+            supported
+          </ListItem>
         </List>
       </Subsection>
       <Subsection>
