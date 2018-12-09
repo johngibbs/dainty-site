@@ -80,8 +80,8 @@ class Preview extends React.Component {
         {({
           colors,
           preset,
+          getProperty,
           getTypeShade,
-          getTokenColor,
           lightnessStart,
           lightnessEnd,
           chroma
@@ -204,7 +204,7 @@ class Preview extends React.Component {
               <SyntaxHighlighterContainer>
                 <SyntaxHighlighter
                   language={this.state.example}
-                  style={getCustomizations(colors, getTypeShade, getTokenColor)}
+                  style={getCustomizations(colors, getProperty, getTypeShade)}
                 >
                   {examples[this.state.example].code}
                 </SyntaxHighlighter>
@@ -217,7 +217,7 @@ class Preview extends React.Component {
               <SyntaxHighlighterContainer>
                 <SyntaxHighlighter
                   language="javascript"
-                  style={getCustomizations(colors, getTypeShade, getTokenColor)}
+                  style={getCustomizations(colors, getProperty, getTypeShade)}
                 >
                   {this.getConfiguration(
                     preset,

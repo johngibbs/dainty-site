@@ -1,4 +1,4 @@
-export function getCustomizations(colors, getTypeShade, getTokenColor) {
+export function getCustomizations(colors, getProperty, getTypeShade) {
   // Based on `vs`
 
   return {
@@ -12,82 +12,82 @@ export function getCustomizations(colors, getTypeShade, getTokenColor) {
       backgroundColor: colors.neutral[getTypeShade(0)]
     },
     comment: {
-      color: getTokenColor("comment")
+      color: getProperty("token.comment")
     },
     prolog: {
-      color: getTokenColor("comment")
+      color: getProperty("token.comment")
     },
     doctype: {
-      color: getTokenColor("comment")
+      color: getProperty("token.comment")
     },
     cdata: {
-      color: getTokenColor("comment")
+      color: getProperty("token.comment")
     },
     string: {
-      color: getTokenColor("string")
+      color: getProperty("token.string")
     },
     punctuation: {
-      color: getTokenColor("punctuation")
+      color: getProperty("token.punctuation")
     },
     operator: {
-      color: getTokenColor("operator")
+      color: getProperty("token.operator")
     },
     url: {
-      color: getTokenColor("url")
+      color: getProperty("token.url")
     },
     symbol: {
-      color: getTokenColor("operator")
+      color: getProperty("token.operator")
     },
     number: {
-      color: getTokenColor("number")
+      color: getProperty("token.number")
     },
     boolean: {
-      color: getTokenColor("literal")
+      color: getProperty("token.literal")
     },
     variable: {
-      color: getTokenColor("variable")
+      color: getProperty("token.variable")
     },
     constant: {
-      color: getTokenColor("constant")
+      color: getProperty("token.constant")
     },
     atrule: {
-      color: getTokenColor("keyword")
+      color: getProperty("token.keyword")
     },
     keyword: {
-      color: getTokenColor("keyword")
+      color: getProperty("token.keyword")
     },
     "attr-value": {
-      color: getTokenColor("string")
+      color: getProperty("token.string")
     },
     function: {
-      color: getTokenColor("function")
+      color: getProperty("token.function")
     },
     selector: {
-      color: getTokenColor("otherType")
+      color: getProperty("token.otherType")
     },
     "class-name": {
-      color: getTokenColor("type")
+      color: getProperty("token.type")
     },
     ".language-json .token.property": {
-      color: getTokenColor("property")
+      color: getProperty("token.property")
     },
     tag: {
-      color: getTokenColor("type")
+      color: getProperty("token.type")
     },
     "attr-name": {
-      color: getTokenColor("attributeName")
+      color: getProperty("token.attributeName")
     },
     property: {
-      color: getTokenColor("property")
+      color: getProperty("token.property")
     },
     regex: {
-      color: getTokenColor("regex")
+      color: getProperty("token.regex")
     },
     entity: {
-      color: getTokenColor("type")
+      color: getProperty("token.type")
     },
     "directive.tag  .tag": {
-      color: getTokenColor("type")
+      color: getProperty("token.type")
     }
   };
 }

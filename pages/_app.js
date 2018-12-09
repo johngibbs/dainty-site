@@ -3,7 +3,7 @@ import App, { Container } from "next/app";
 import {
   generateColorScales,
   generateColorConstants,
-  getTokenColorFunction,
+  getPropertyFunction,
   getTypeShadeFunction
 } from "dainty-shared/src/colors";
 import { presets } from "dainty-shared/presets-web";
@@ -115,11 +115,11 @@ export default class MyApp extends App {
             colors: this.state.colors,
             colorConstants: this.state.colorConstants,
             configuration: this.state.configuration,
-            getTypeShade: getTypeShadeFunction(this.state.configuration),
-            getTokenColor: getTokenColorFunction(
+            getProperty: getPropertyFunction(
               this.state.configuration,
               this.state.colorConstants
             ),
+            getTypeShade: getTypeShadeFunction(this.state.configuration),
             lightnessStart: this.state.lightnessStart,
             lightnessEnd: this.state.lightnessEnd,
             chroma: this.state.chroma
