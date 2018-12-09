@@ -31,8 +31,11 @@ const Overview = () => (
         <Text small>
           Presets are configuration files that can be used in addition to
           <Code>`configuration.jsonc`</Code>. Presets are located in the{" "}
-          <Code>`presets`</Code> directory of the shared repository and can be
-          activated by using <Code>`-p &lt;preset&gt;`</Code> or
+          <Anchor href="https://github.com/alexanderte/dainty-shared/tree/master/presets">
+            <Code>`presets`</Code>
+          </Anchor>{" "}
+          directory of the shared repository and can be activated by using{" "}
+          <Code>`-p &lt;preset&gt;`</Code> or
           <Code>`--preset &lt;preset&gt;`</Code>:
         </Text>
         <CodeSection>yarn build -p dainty-light</CodeSection>
@@ -141,6 +144,16 @@ const Overview = () => (
             </Tr>
           </tbody>
         </Table>
+      </Subsection>
+      <Subsection>
+        <Heading level={3}>
+          <Code>`customizations.tokenFilter`</Code> (<Code>`integer`</Code>)
+        </Heading>
+        <Text small>
+          An integer in range 0–3 where a higher value reduces the number of
+          special tokens that the theme is using. Defaults value is{" "}
+          <Code>`0`</Code>.
+        </Text>
       </Subsection>
     </Section>
     <Section>
