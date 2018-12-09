@@ -201,7 +201,7 @@ class Preview extends React.Component {
                   </div>
                 </div>
               </div>
-              <SyntaxHighlighterContainer>
+              <SyntaxHighlighterContainer boxShadow>
                 <SyntaxHighlighter
                   language={this.state.example}
                   style={getCustomizations(colors, getProperty, getTypeShade)}
@@ -214,7 +214,7 @@ class Preview extends React.Component {
               <Heading level={2}>
                 <Code>`configuration.jsonc`</Code>
               </Heading>
-              <SyntaxHighlighterContainer>
+              <SyntaxHighlighterContainer border>
                 <SyntaxHighlighter
                   language="javascript"
                   style={getCustomizations(colors, getProperty, getTypeShade)}

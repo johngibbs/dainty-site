@@ -4,22 +4,31 @@ import { ScrollContainer } from "./core";
 
 export const SyntaxHighlighterContainer = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
-      <React.Fragment>
-        <ScrollContainer
-          marginBottom={32}
-          border={`1px solid ${colors.neutral[getTypeShade(6)]}`}
-        >
-          <div>{props.children}</div>
-        </ScrollContainer>
-        <style jsx>{`
-          div {
-            ${props.height && `height: ${props.height}px`};
-            padding: 16px 24px;
-          }
-        `}</style>
-      </React.Fragment>
-    )}
+    {({ colors, getTypeShade }) => {
+      let styles = {};
+
+      if (props.border) {
+        styles.border = `1px solid ${colors.neutral[getTypeShade(6)]}`;
+      }
+
+      if (props.boxShadow) {
+        styles.boxShadow = `1px 2px 12.5px rgba(0, 0, 0, 0.1875)`;
+      }
+
+      return (
+        <React.Fragment>
+          <ScrollContainer marginBottom={32} {...styles}>
+            <div>{props.children}</div>
+          </ScrollContainer>
+          <style jsx>{`
+            div {
+              ${props.height && `height: ${props.height}px`};
+              padding: 16px 24px;
+            }
+          `}</style>
+        </React.Fragment>
+      );
+    }}
   </ColorsContext.Consumer>
 );
 

@@ -215,6 +215,8 @@ export class ScrollContainer extends React.Component {
                 position: relative;
                 margin-bottom: ${this.props.marginBottom}px;
                 ${this.props.border && `border: ${this.props.border}`};
+                ${this.props.boxShadow &&
+                  `box-shadow: ${this.props.boxShadow}`};
               }
 
               .scroll-container {
