@@ -34,7 +34,7 @@ export const SiteContainer = props => (
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <style>{`
-          @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i');
+          @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i');
           @import url('https://overpass-30e2.kxcdn.com/overpass-mono.css');
           @import url('https://csshake.surge.sh/csshake.min.css');
 
@@ -62,7 +62,7 @@ export const SiteContainer = props => (
               Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
               Segoe UI Symbol;
             color: ${colors.neutral[getTypeShade(34, 0)]};
-            font-weight: 400;
+            font-weight: 300;
             line-height: 1.875;
           }
 
@@ -157,17 +157,21 @@ export const Sidebar = withRouter(({ router }) => (
         <List small>
           <ListItem>
             <Link href="/">
-              <Anchor active={router.pathname === "/"}>Overview</Anchor>
+              <Anchor nav active={router.pathname === "/"}>
+                Overview
+              </Anchor>
             </Link>
           </ListItem>
           <ListItem>
             <Link href="/preview" prefetch>
-              <Anchor active={router.pathname === "/preview"}>Preview</Anchor>
+              <Anchor nav active={router.pathname === "/preview"}>
+                Preview
+              </Anchor>
             </Link>
           </ListItem>
           <ListItem>
             <Link href="/configuration" prefetch>
-              <Anchor active={router.pathname === "/configuration"}>
+              <Anchor nav active={router.pathname === "/configuration"}>
                 Configuration
               </Anchor>
             </Link>
@@ -179,19 +183,21 @@ export const Sidebar = withRouter(({ router }) => (
         <List small>
           <ListItem>
             <Link href="/vscode" prefetch>
-              <Anchor active={router.pathname === "/vscode"}>
+              <Anchor nav active={router.pathname === "/vscode"}>
                 Visual Studio Code
               </Anchor>
             </Link>
           </ListItem>
           <ListItem>
             <Link href="/vs" prefetch>
-              <Anchor active={router.pathname === "/vs"}>Visual Studio</Anchor>
+              <Anchor nav active={router.pathname === "/vs"}>
+                Visual Studio
+              </Anchor>
             </Link>
           </ListItem>
           <ListItem>
             <Link href="/wsltty" prefetch>
-              <Anchor active={router.pathname === "/wsltty"}>
+              <Anchor nav active={router.pathname === "/wsltty"}>
                 WSLtty/Mintty
               </Anchor>
             </Link>

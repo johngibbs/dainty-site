@@ -15,8 +15,9 @@ const WSLtty = props => (
         <Bold>WSLtty/Mintty</Bold>. It comes with default presets{" "}
         <Bold>Dainty Dark</Bold> and <Bold>Dainty Light</Bold>. They’re refined
         and balanced color themes, using carefully selected colors within the{" "}
-        <Bold>Lab color space</Bold>. Dainty also comes with presets based on{" "}
-        <Bold>popular color themes</Bold> and brands.
+        <Bold>Lab color space</Bold>. Dainty also comes with{" "}
+        <Bold>popular color themes</Bold> as presets, and presets based on
+        brands.
       </Text>
     </Section>
     <ScreenshotSection

@@ -92,6 +92,18 @@ export class ListItem extends React.Component {
                 };
               `};
               }
+
+              @media (max-width: 1023.98px) {
+                li {
+                  ${this.props.small && "font-size: 14px"};
+                }
+              }
+
+              @media (min-width: 1024px) {
+                li {
+                  ${this.props.small && "font-size: 15px"};
+                }
+              }
             `}</style>
           </React.Fragment>
         )}

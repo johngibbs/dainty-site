@@ -24,11 +24,12 @@ export class ScreenshotSection extends React.Component {
   render() {
     return (
       <Section>
-        <Heading level={2}>Screenshots</Heading>
+        <Heading level={2}>Presets</Heading>
         <List horizontal>
           {Object.keys(this.props.screenshots).map(s => (
-            <ListItem key={s} horizontal>
+            <ListItem key={s} horizontal small>
               <Anchor
+                nav
                 active={this.state.screenshot === s}
                 onClick={() => this.showScreenshot(s)}
               >
@@ -43,9 +44,9 @@ export class ScreenshotSection extends React.Component {
               key={s}
               horizontal
               visible={this.state.screenshot === s}
-              src={`/static/${changeCase.paramCase(s)}-${
-                this.props.application
-              }.png`}
+              src={`/static/${this.props.application}-${changeCase.paramCase(
+                s
+              )}.png`}
             />
           ))}
         </ScreenshotContainer>

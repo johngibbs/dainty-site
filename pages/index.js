@@ -47,9 +47,9 @@ const Overview = () => (
           presets of Dainty. They’re balanced and refined color themes using
           carefully selected colors within the Lab color space. They are
           designed to <Bold>maximize readability</Bold> and{" "}
-          <Bold>reduce eye strain</Bold>. Dainty also comes with presets based
-          on <Bold>popular themes</Bold> such as Night Owl, or even things like
-          the branding colors of Prettier.
+          <Bold>reduce eye strain</Bold>. Dainty also comes with{" "}
+          <Bold>popular themes</Bold> as presets – such as Night Owl – or even
+          things like the branding colors of Prettier.
         </Text>
         <Text>
           Try out different presets on the{" "}
