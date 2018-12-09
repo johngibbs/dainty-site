@@ -68,12 +68,6 @@ export const ScreenshotContainer = props => (
             height: 0;
             overflow: hidden;
           }
-
-          @media (min-width: 1024px) {
-            div {
-              transition: opacity 0.375s ease;
-            }
-          }
         `}</style>
       </React.Fragment>
     )}
@@ -90,6 +84,12 @@ export const Screenshot = props => (
         width: 100%;
         ${props.first ? "position: relative" : "position: absolute"};
         ${!props.visible && "opacity: 0"};
+      }
+
+      @media (min-width: 1024px) {
+        img {
+          transition: opacity 0.375s ease;
+        }
       }
     `}</style>
   </React.Fragment>
