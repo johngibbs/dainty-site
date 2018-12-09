@@ -14,7 +14,6 @@ export const Slider = props => {
               height: 14px;
               padding: 5px 0;
               width: 100%;
-              border-radius: 6px;
               -ms-touch-action: none;
               touch-action: none;
               box-sizing: border-box;
@@ -31,16 +30,16 @@ export const Slider = props => {
               position: absolute;
               width: 100%;
               background-color: ${colors.neutral[getTypeShade(3)]};
-              height: 4px;
-              border-radius: 6px;
+              height: 1px;
+              top: 6.5px;
             }
 
             .rc-slider-track {
               position: absolute;
               left: 0;
-              height: 4px;
-              border-radius: 6px;
-              background-color: ${colors.neutral[getTypeShade(12)]};
+              height: 1px;
+              top: 6.5px;
+              background-color: ${colors.neutral[getTypeShade(16)]};
             }
 
             .rc-slider-handle {
@@ -52,9 +51,8 @@ export const Slider = props => {
               cursor: pointer;
               cursor: -webkit-grab;
               cursor: grab;
-              border-radius: 50%;
-              border: solid 2px ${colors.neutral[getTypeShade(16)]};
-              background-color: ${colors.neutral[40]};
+              border: solid 1px ${colors.neutral[getTypeShade(20)]};
+              background-color: ${colors.neutral[getTypeShade(0)]};
               -ms-touch-action: pan-x;
               touch-action: pan-x;
             }
