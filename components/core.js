@@ -148,10 +148,12 @@ export const Anchor = props => (
         <style jsx>{`
           a {
             color: ${props.nav
-              ? colors.neutral[getTypeShade(28)]
+              ? props.active
+                ? colors.neutral[getTypeShade(34)]
+                : colors.neutral[getTypeShade(24)]
               : colors.blueMoreChroma[getTypeShade(28)]};
+            ${props.active && "font-weight: 400"};
             cursor: pointer;
-            ${props.active && "font-weight: 500"};
             text-decoration: none;
           }
 
