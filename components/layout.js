@@ -204,6 +204,18 @@ export const Sidebar = withRouter(({ router }) => (
           </ListItem>
         </List>
       </Subsection>
+      <Subsection>
+        <Heading level={3}>Extras</Heading>
+        <List small>
+          <ListItem>
+            <Link href="/implementation" prefetch>
+              <Anchor nav active={router.pathname === "/implementation"}>
+                Implementation
+              </Anchor>
+            </Link>
+          </ListItem>
+        </List>
+      </Subsection>
     </div>
     <style jsx>{`
       div {
