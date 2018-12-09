@@ -147,7 +147,7 @@ const Overview = () => (
       </Subsection>
       <Subsection>
         <Heading level={3}>
-          <Code>`customizations.tokenFilter`</Code> (<Code>`integer`</Code>)
+          <Code>`customizations.tokensFilter`</Code> (<Code>`integer`</Code>)
         </Heading>
         <Text small>
           An integer in range 0–3 where a higher value reduces the number of
