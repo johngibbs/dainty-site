@@ -1,6 +1,6 @@
 export const screenshots = {
-  daintyDark: "Dainty Dark",
   daintyLight: "Dainty Light",
+  daintyDark: "Dainty Dark",
   cobalt2: "Cobalt2",
   dracula: "Dracula",
   nightOwl: "Night Owl",
