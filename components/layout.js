@@ -267,11 +267,16 @@ export const Content = props => (
     </div>
     <style jsx>{`
       @media (max-width: 1023.98px) {
-        width: 100%;
+        div {
+          width: 100%;
+        }
       }
 
       @media (min-width: 1024px) {
-        width: 1024px;
+        div {
+          width: 1024px;
+          margin-top: -8px;
+        }
       }
     `}</style>
   </React.Fragment>
