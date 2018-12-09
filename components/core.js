@@ -49,7 +49,7 @@ export const Bold = props => (
     <b>{props.children}</b>
     <style jsx>{`
       b {
-        font-weight: 400;
+        font-weight: 500;
       }
     `}</style>
   </React.Fragment>
@@ -88,12 +88,12 @@ export const Heading = props => {
             }
 
             h1 {
-              font-weight: 300;
+              font-weight: 400;
               margin-bottom: 24px;
             }
 
             h2 {
-              font-weight: 300;
+              font-weight: 400;
               margin-bottom: 16px;
             }
 
@@ -149,7 +149,7 @@ export const Anchor = props => (
           a {
             color: ${colors.blueMoreChroma[getTypeShade(28)]};
             cursor: pointer;
-            ${props.active && "font-weight: 400"};
+            ${props.active && "font-weight: 500"};
             text-decoration: none;
           }
 

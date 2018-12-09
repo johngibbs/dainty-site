@@ -62,7 +62,7 @@ export const SiteContainer = props => (
               Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
               Segoe UI Symbol;
             color: ${colors.neutral[getTypeShade(34, 0)]};
-            font-weight: 300;
+            font-weight: 400;
             line-height: 1.875;
           }
 

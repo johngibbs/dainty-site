@@ -49,7 +49,7 @@ export const Th = props => (
     <style jsx>{`
       th {
         text-align: left;
-        font-weight: 400;
+        font-weight: 500;
         padding: 16px;
         white-space: nowrap;
       }
