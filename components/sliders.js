@@ -43,6 +43,7 @@ export const Slider = props => {
             }
 
             .rc-slider-handle {
+              border-radius: 50%;
               position: absolute;
               margin-left: -7px;
               margin-top: -5px;
