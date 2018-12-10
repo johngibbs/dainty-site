@@ -24,14 +24,12 @@ const VSCode = props => (
       <Heading level={2}>Features</Heading>
       <List listStyle="✓">
         <ListItem listStyle="✓">
-          Precise and pleasant colors are generated and selected within the Lab
-          color space
+          Colors are processed within the Lab color space
         </ListItem>
         <ListItem listStyle="✓">Punctuation marks are slightly dimmed</ListItem>
         <ListItem listStyle="✓">
-          Workbench is less busy than in the default themes
+          Workbench is less busy than in the default/original themes
         </ListItem>
-        <ListItem listStyle="✓">Colors can be adjusted</ListItem>
       </List>
     </Section>
     <ScreenshotSection
