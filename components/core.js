@@ -88,12 +88,12 @@ export const Heading = props => {
             }
 
             h1 {
-              font-weight: 400;
+              font-weight: 300;
               margin-bottom: 24px;
             }
 
             h2 {
-              font-weight: 400;
+              font-weight: 300;
               margin-bottom: 16px;
             }
 
@@ -150,7 +150,7 @@ export const Anchor = props => (
             color: ${props.nav
               ? props.active
                 ? colors.neutral[getTypeShade(34, 0)]
-                : colors.neutral[getTypeShade(24, 22)]
+                : colors.neutral[getTypeShade(24, 20)]
               : colors.blueMoreChroma[getTypeShade(28)]};
             cursor: pointer;
             text-decoration: none;
