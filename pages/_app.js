@@ -1,8 +1,7 @@
 import React from "react";
 import App, { Container } from "next/app";
 import {
-  generateColorScales,
-  generateColorConstants,
+  getColorFunction,
   getPropertyFunction,
   getTypeShadeFunction
 } from "dainty-shared/src/colors";
@@ -14,14 +13,9 @@ export default class MyApp extends App {
   constructor(props) {
     super(props);
 
-    const colors = generateColorScales(presets.daintyLight);
-    const colorConstants = generateColorConstants(colors);
-
     this.state = {
       preset: "daintyLight",
       configuration: presets.daintyLight,
-      colors,
-      colorConstants,
       lightnessStart: 0,
       lightnessEnd: 0,
       chroma: 0
@@ -58,13 +52,8 @@ export default class MyApp extends App {
       chroma
     };
 
-    const colors = generateColorScales(configuration);
-    const colorConstants = generateColorConstants(colors);
-
     this.setState({
       configuration,
-      colors,
-      colorConstants,
       lightnessStart,
       lightnessEnd,
       chroma
@@ -73,14 +62,10 @@ export default class MyApp extends App {
 
   setPreset(preset) {
     const configuration = presets[preset];
-    const colors = generateColorScales(configuration);
-    const colorConstants = generateColorConstants(colors);
 
     this.setState({
       preset,
       configuration,
-      colors,
-      colorConstants,
       lightnessStart: 0,
       lightnessEnd: 0,
       chroma: 0
@@ -112,12 +97,11 @@ export default class MyApp extends App {
         <ColorsContext.Provider
           value={{
             preset: this.state.preset,
-            colors: this.state.colors,
-            colorConstants: this.state.colorConstants,
             configuration: this.state.configuration,
+            getColor: getColorFunction(this.state.configuration),
             getProperty: getPropertyFunction(
               this.state.configuration,
-              this.state.colorConstants
+              getColorFunction(this.state.configuration)
             ),
             getTypeShade: getTypeShadeFunction(this.state.configuration),
             lightnessStart: this.state.lightnessStart,

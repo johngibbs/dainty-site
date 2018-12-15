@@ -16,7 +16,7 @@ import { List, ListItem } from "../components/lists";
 
 export const SiteContainer = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         <GitHubCorner />
 
@@ -39,7 +39,7 @@ export const SiteContainer = props => (
           @import url('https://csshake.surge.sh/csshake.min.css');
 
           body {
-            background-color: ${colors.neutral[getTypeShade(0)]};
+            background-color: ${getColor("neutral", getTypeShade(0))};
           }
 
           * {
@@ -61,7 +61,7 @@ export const SiteContainer = props => (
             font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
               Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
               Segoe UI Symbol;
-            color: ${colors.neutral[getTypeShade(34, 0)]};
+            color: ${getColor("neutral", getTypeShade(14, 0))};
             font-weight: 300;
             line-height: 1.875;
           }

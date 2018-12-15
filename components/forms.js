@@ -3,13 +3,13 @@ import { ColorsContext } from "../colors-context";
 
 export const Select = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         <select {...props}>{props.children}</select>
         <style jsx>{`
           select {
-            background-color: ${colors.neutral[getTypeShade(3)]};
-            color: ${colors.neutral[getTypeShade(34)]};
+            background-color: ${getColor("neutral", getTypeShade(1))};
+            color: ${getColor("neutral", getTypeShade(14))};
             cursor: pointer;
             border: none;
             margin-bottom: 16px;
@@ -20,12 +20,12 @@ export const Select = props => (
           }
 
           select:hover {
-            color: ${colors.neutral[getTypeShade(38)]};
-            background-color: ${colors.neutral[getTypeShade(5)]};
+            color: ${getColor("neutral", getTypeShade(15))};
+            background-color: ${getColor("neutral", getTypeShade(2))};
           }
 
           select:focus {
-            box-shadow: 0 0 0 1px ${colors.blueLessChroma[getTypeShade(16)]};
+            box-shadow: 0 0 0 1px ${getColor("blueLessChroma", getTypeShade(6))};
             outline: none;
           }
         `}</style>
@@ -36,13 +36,13 @@ export const Select = props => (
 
 export const Option = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         <option {...props}>{props.children}</option>
         <style jsx>{`
           option {
-            background-color: ${colors.neutral[getTypeShade(3)]};
-            color: ${colors.neutral[getTypeShade(34)]};
+            background-color: ${getColor("neutral", getTypeShade(1))};
+            color: inherit;
             font-weight: inherit;
           }
         `}</style>
@@ -65,13 +65,13 @@ export const Label = props => (
 
 export const Button = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         <button>{props.children}</button>
         <style jsx>{`
           button {
-            background-color: ${colors.blueMoreChroma[getTypeShade(8)]};
-            color: ${colors.neutral[getTypeShade(40)]};
+            background-color: ${getColor("blueMoreChroma", getTypeShade(3))};
+            color: ${getColor("neutral", getTypeShade(16))};
             font-family: inherit;
             font-size: inherit;
             font-weight: 400;

@@ -4,7 +4,7 @@ import { alpha } from "dainty-shared/src/colors";
 
 export const GitHubCorner = () => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         <a
           href="https://github.com/alexanderte"
@@ -62,8 +62,8 @@ export const GitHubCorner = () => (
           }
 
           .github-corner {
-            fill: ${alpha(colors.neutral[getTypeShade(4)], 0.75)};
-            color: ${colors.blue[getTypeShade(36)]};
+            fill: ${getColor("neutral", getTypeShade(4), 0.75)};
+            color: ${getColor("blue", getTypeShade(36))};
             position: fixed;
             top: 0;
             border: 0;
@@ -73,8 +73,8 @@ export const GitHubCorner = () => (
           }
 
           .github-corner:hover {
-            fill: ${colors.neutral[getTypeShade(4)]};
-            color: ${colors.blue[getTypeShade(36)]};
+            fill: ${getColor("neutral", getTypeShade(4))};
+            color: ${getColor("blue", getTypeShade(36))};
           }
         `}</style>
       </React.Fragment>

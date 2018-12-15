@@ -4,11 +4,11 @@ import { ScrollContainer } from "./core";
 
 export const SyntaxHighlighterContainer = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => {
+    {({ getColor, getTypeShade }) => {
       let styles = {};
 
       if (props.border) {
-        styles.border = `1px solid ${colors.neutral[getTypeShade(6)]}`;
+        styles.border = `1px solid ${getColor("neutral", getTypeShade(3))}`;
       }
 
       if (props.boxShadow) {
@@ -34,11 +34,11 @@ export const SyntaxHighlighterContainer = props => (
 
 export const CodeSection = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         <ScrollContainer
           marginBottom={32}
-          border={`1px solid ${colors.neutral[getTypeShade(6)]}`}
+          border={`1px solid ${getColor("neutral", getTypeShade(3))}`}
         >
           <pre>
             <code>{props.children}</code>
@@ -54,7 +54,7 @@ export const CodeSection = props => (
           code {
             font-family: overpass-mono, SFMono-Regular, Consolas,
               Liberation Mono, Menlo, Courier, monospace;
-            color: ${colors.purple[getTypeShade(32)]};
+            color: ${getColor("purple", getTypeShade(13))};
           }
 
           @media (max-width: 1023.98px) {
@@ -76,7 +76,7 @@ export const CodeSection = props => (
 
 export const Code = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         <code>{props.children}</code>
         <style jsx>{`
@@ -85,8 +85,8 @@ export const Code = props => (
               Liberation Mono, Menlo, Courier, monospace;
             font-size: 87.5%;
             color: ${props.token === "punctuation"
-              ? colors.neutral[getTypeShade(26)]
-              : colors.purple[getTypeShade(32)]};
+              ? getColor("neutral", getTypeShade(10))
+              : getColor("purple", getTypeShade(33))};
           }
         `}</style>
       </React.Fragment>

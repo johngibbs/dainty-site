@@ -5,7 +5,7 @@ import RcSlider from "rc-slider";
 export const Slider = props => {
   return (
     <ColorsContext.Consumer>
-      {({ colors, getTypeShade }) => (
+      {({ getColor, getTypeShade }) => (
         <React.Fragment>
           <RcSlider {...props} />
           <style jsx global>{`
@@ -29,7 +29,7 @@ export const Slider = props => {
             .rc-slider-rail {
               position: absolute;
               width: 100%;
-              background-color: ${colors.neutral[getTypeShade(3)]};
+              background-color: ${getColor("neutral", getTypeShade(1))};
               height: 1px;
               top: 6.5px;
             }
@@ -39,7 +39,7 @@ export const Slider = props => {
               left: 0;
               height: 1px;
               top: 6.5px;
-              background-color: ${colors.neutral[getTypeShade(16)]};
+              background-color: ${getColor("neutral", getTypeShade(6))};
             }
 
             .rc-slider-handle {
@@ -52,30 +52,31 @@ export const Slider = props => {
               cursor: pointer;
               cursor: -webkit-grab;
               cursor: grab;
-              border: solid 1px ${colors.neutral[getTypeShade(20)]};
-              background-color: ${colors.neutral[getTypeShade(0)]};
+              border: solid 1px ${getColor("neutral", getTypeShade(8))};
+              background-color: ${getColor("neutral", getTypeShade(0))};
               -ms-touch-action: pan-x;
               touch-action: pan-x;
             }
 
             .rc-slider-handle:focus {
-              border-color: ${colors.neutral[getTypeShade(20)]};
-              box-shadow: 0 0 0 1px ${colors.blueLessChroma[getTypeShade(16)]};
+              border-color: ${getColor("neutral", getTypeShade(8))};
+              box-shadow: 0 0 0 1px
+                ${getColor("blueLessChroma", getTypeShade(6))};
               outline: none;
             }
 
             .rc-slider-handle-click-focused:focus {
-              border-color: ${colors.neutral[getTypeShade(16)]};
+              border-color: ${getColor("neutral", getTypeShade(6))};
               box-shadow: unset;
             }
 
             .rc-slider-handle:hover {
-              border-color: ${colors.neutral[getTypeShade(20)]};
+              border-color: ${getColor("neutral", getTypeShade(8))};
             }
 
             .rc-slider-handle:active {
-              border-color: ${colors.neutral[getTypeShade(20)]};
-              box-shadow: 0 0 1px ${colors.blueLessChroma[getTypeShade(20)]};
+              border-color: ${getColor("neutral", getTypeShade(8))};
+              box-shadow: 0 0 1px ${getColor("blueLessChroma", getTypeShade(8))};
               cursor: -webkit-grabbing;
               cursor: grabbing;
             }

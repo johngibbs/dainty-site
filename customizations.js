@@ -1,4 +1,4 @@
-export function getCustomizations(colors, getProperty, getTypeShade) {
+export function getCustomizations(getColor, getProperty, getTypeShade) {
   // Based on `vs`
 
   return {
@@ -9,7 +9,7 @@ export function getCustomizations(colors, getProperty, getTypeShade) {
     },
     'pre[class*="language-"]': {
       lineHeight: 1.5,
-      backgroundColor: colors.neutral[getTypeShade(0)]
+      backgroundColor: getColor("neutral", getTypeShade(0))
     },
     comment: {
       color: getProperty("token.comment")

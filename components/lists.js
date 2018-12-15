@@ -54,7 +54,7 @@ export class ListItem extends React.Component {
   render() {
     return (
       <ColorsContext.Consumer>
-        {({ colors, getTypeShade }) => (
+        {({ getColor, getTypeShade }) => (
           <React.Fragment>
             <li
               className={
@@ -87,8 +87,8 @@ export class ListItem extends React.Component {
                 };
                 color: ${
                   this.props.listStyle === "✓"
-                    ? colors.neutral[getTypeShade(24)]
-                    : colors.neutral[getTypeShade(16)]
+                    ? getColor("neutral", getTypeShade(10))
+                    : getColor("neutral", getTypeShade(6))
                 };
               `};
               }

@@ -1,9 +1,7 @@
-import Link from "next/link";
 import { Section, Subsection } from "../components/layout";
-import { Heading, Anchor, Text, Bold } from "../components/core";
-import { List, ListItem } from "../components/lists";
+import { Heading, Anchor, Text } from "../components/core";
 
-const Overview = () => (
+const Implementation = () => (
   <>
     <Heading level={1}>Dainty – Implementation</Heading>
     <Section>
@@ -39,4 +37,4 @@ const Overview = () => (
   </>
 );
 
-export default Overview;
+export default Implementation;

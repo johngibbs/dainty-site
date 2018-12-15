@@ -30,12 +30,12 @@ export const Table = props => (
 
 export const Tr = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         <tr>{props.children}</tr>
         <style jsx>{`
           tr {
-            border-bottom: 0.5px solid ${colors.neutral[getTypeShade(10)]};
+            border-bottom: 0.5px solid ${getColor("neutral", getTypeShade(4))};
           }
         `}</style>
       </React.Fragment>

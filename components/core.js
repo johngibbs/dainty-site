@@ -57,13 +57,13 @@ export const Bold = props => (
 
 export const HorizontalRule = () => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         <hr />
         <style jsx>{`
           hr {
             border: 0;
-            border-bottom: 1px solid ${colors.neutral[getTypeShade(6)]};
+            border-bottom: 1px solid ${getColor("neutral", getTypeShade(3))};
             margin: 64px 0;
           }
         `}</style>
@@ -77,14 +77,14 @@ export const Heading = props => {
 
   return (
     <ColorsContext.Consumer>
-      {({ colors, getTypeShade }) => (
+      {({ getColor, getTypeShade }) => (
         <React.Fragment>
           <H>{props.children}</H>
           <style jsx global>{`
             h1,
             h2,
             h3 {
-              color: ${colors.blueLessChroma[getTypeShade(34)]};
+              color: ${getColor("blueLessChroma", getTypeShade(14))};
             }
 
             h1 {
@@ -138,7 +138,7 @@ export const Heading = props => {
 
 export const Anchor = props => (
   <ColorsContext.Consumer>
-    {({ colors, getTypeShade }) => (
+    {({ getColor, getTypeShade }) => (
       <React.Fragment>
         {props.href ? (
           <a href={props.href}>{props.children}</a>
@@ -149,15 +149,15 @@ export const Anchor = props => (
           a {
             color: ${props.nav
               ? props.active
-                ? colors.neutral[getTypeShade(34, 0)]
-                : colors.neutral[getTypeShade(24, 20)]
-              : colors.blueMoreChroma[getTypeShade(28)]};
+                ? getColor("neutral", getTypeShade(24, 0))
+                : getColor("neutral", getTypeShade(10, 8))
+              : getColor("blueMoreChroma", getTypeShade(11))};
             cursor: pointer;
             text-decoration: none;
           }
 
           a:hover {
-            color: ${colors.blueMoreChroma[getTypeShade(32, 20)]};
+            color: ${getColor("blueMoreChroma", getTypeShade(13, 8))};
           }
         `}</style>
       </React.Fragment>
@@ -201,7 +201,7 @@ export class ScrollContainer extends React.Component {
   render() {
     return (
       <ColorsContext.Consumer>
-        {({ colors, getTypeShade }) => (
+        {({ getColor, getTypeShade }) => (
           <React.Fragment>
             <div className="container" onScroll={this.onScroll}>
               <div
@@ -234,10 +234,11 @@ export class ScrollContainer extends React.Component {
                 position: absolute;
                 background: linear-gradient(
                   to right,
-                  ${alpha(colors.neutral[getTypeShade(0)], 0)} 0%,
-                  ${alpha(colors.neutral[getTypeShade(0)], 0)} 87.5%,
-                  ${alpha(
-                      colors.neutral[getTypeShade(0)],
+                  ${getColor("neutral", getTypeShade(0), 0)} 0%,
+                  ${getColor("neutral", getTypeShade(0), 0)} 87.5%,
+                  ${getColor(
+                      "neutral",
+                      getTypeShade(0),
                       this.getOpacity(this.ref)
                     )}
                     100%
