@@ -29,7 +29,7 @@ export const Slider = props => {
             .rc-slider-rail {
               position: absolute;
               width: 100%;
-              background-color: ${getColor("neutral", getTypeShade(1))};
+              background-color: ${getColor("neutral", getTypeShade(3))};
               height: 1px;
               top: 6.5px;
             }
@@ -39,7 +39,7 @@ export const Slider = props => {
               left: 0;
               height: 1px;
               top: 6.5px;
-              background-color: ${getColor("neutral", getTypeShade(6))};
+              background-color: ${getColor("neutral", getTypeShade(7))};
             }
 
             .rc-slider-handle {
