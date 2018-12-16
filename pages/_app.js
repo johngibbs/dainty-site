@@ -5,7 +5,7 @@ import {
   getPropertyFunction,
   getTypeShadeFunction
 } from "dainty-shared/src/colors";
-import { presets } from "dainty-shared/presets-web";
+import { presets } from "dainty-shared/src/presets-web";
 import { Page, SiteContainer, Content, Sidebar } from "../components/layout";
 import { ColorsContext } from "../colors-context";
 

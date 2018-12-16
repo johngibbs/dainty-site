@@ -10,7 +10,7 @@ import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
 import css from "react-syntax-highlighter/dist/cjs/languages/prism/css";
 import elixir from "react-syntax-highlighter/dist/cjs/languages/prism/elixir";
 
-import { presets } from "dainty-shared/presets-web";
+import { presets } from "dainty-shared/src/presets-web";
 import { examples } from "../examples";
 
 import { Code, SyntaxHighlighterContainer } from "../components/code";
