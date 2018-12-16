@@ -1,6 +1,5 @@
 import React from "react";
 import { ColorsContext } from "../colors-context";
-import { alpha } from "dainty-shared/src/colors";
 
 export const Text = props => (
   <React.Fragment>
