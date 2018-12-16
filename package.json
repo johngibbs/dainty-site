@@ -7,7 +7,7 @@
   "dependencies": {
     "@zeit/next-css": "1.0.1",
     "change-case": "3.0.2",
-    "dainty-shared": "3.0.0-f23f53b",
+    "dainty-shared": "3.0.0-2aaaddf",
     "next": "7.0.2",
     "rc-slider": "8.6.3",
     "react": "16.6.3",
