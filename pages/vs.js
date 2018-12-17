@@ -77,7 +77,7 @@ yarn
 `}</CodeSection>
       <Subsection>
         <Heading level={3}>Build the theme</Heading>
-        <CodeSection>{`yarn build`}</CodeSection>
+        <CodeSection>{`yarn build -p dainty-dark`}</CodeSection>
       </Subsection>
       <Subsection>
         Once built, <Anchor href="#setup">set it up</Anchor>.

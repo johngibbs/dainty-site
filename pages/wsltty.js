@@ -66,13 +66,13 @@ yarn
 `}</CodeSection>
       <Subsection>
         <Heading level={3}>WSLtty – Build and install the theme</Heading>
-        <CodeSection>{`yarn build -i`}</CodeSection>
+        <CodeSection>{`yarn build -i -p dainty-dark`}</CodeSection>
         Once installed,{" "}
         <Anchor href="#choose-the-theme">choose the theme in WSLtty</Anchor>.
       </Subsection>
       <Subsection>
         <Heading level={3}>Mintty – Build and install the theme</Heading>
-        <CodeSection>{`yarn build -i -t mintty`}</CodeSection>
+        <CodeSection>{`yarn build -t mintty -i -p dainty-dark`}</CodeSection>
         To install the theme using <Code>`yarn build`</Code>, you need to run
         Git Bash as administrator. Mintty needs to be installed through Git for
         Windows using the default installation path. Once installed,{" "}

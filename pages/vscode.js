@@ -50,7 +50,7 @@ yarn
       <Heading level={3}>
         Install theme into your <Code>`settings.json`</Code>
       </Heading>
-      <CodeSection>{`yarn build -i -p <preset>`}</CodeSection>
+      <CodeSection>{`yarn build -i -p dainty-dark`}</CodeSection>
     </Section>
     <Section>
       <Heading level={3}>Configuration</Heading>
