@@ -14,8 +14,8 @@ export default class MyApp extends App {
     super(props);
 
     this.state = {
-      preset: "daintyLight",
-      configuration: presets.daintyLight,
+      preset: "daintyDark",
+      configuration: presets.daintyDark,
       lightnessStart: 0,
       lightnessEnd: 0,
       chroma: 0
