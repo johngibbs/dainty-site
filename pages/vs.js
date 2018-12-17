@@ -13,10 +13,8 @@ const VS = props => (
       <Text>
         Dainty is a <Bold>color theme generator</Bold> with support for{" "}
         <Bold>Visual Studio</Bold>. It comes with default presets{" "}
-        <Bold>Dainty Dark</Bold> and <Bold>Dainty Light</Bold>. They’re refined
-        and balanced color themes, using carefully selected colors within the{" "}
-        <Bold>Lab color space</Bold>. Dainty also comes with{" "}
-        <Bold>popular color themes</Bold> as, and presets based on brands.
+        <Bold>Dainty Dark</Bold> and <Bold>Dainty Light</Bold> as well as{" "}
+        <Bold>popular color themes</Bold> as its presets.
       </Text>
     </Section>
     <Section>
