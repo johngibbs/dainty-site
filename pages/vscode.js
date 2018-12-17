@@ -13,18 +13,15 @@ const VSCode = props => (
       <Text>
         Dainty is a <Bold>color theme generator</Bold> with support for{" "}
         <Bold>Visual Studio Code</Bold>. It comes with default presets{" "}
-        <Bold>Dainty Dark</Bold> and <Bold>Dainty Light</Bold>. They’re refined
-        and balanced color themes, using carefully selected colors within the{" "}
-        <Bold>Lab color space</Bold>. Dainty also comes with{" "}
-        <Bold>popular color themes</Bold> as presets, and presets based on
-        brands.
+        <Bold>Dainty Dark</Bold> and <Bold>Dainty Light</Bold> as well as{" "}
+        <Bold>popular color themes</Bold> as its presets.
       </Text>
     </Section>
     <Section>
       <Heading level={2}>Features</Heading>
       <List listStyle="✓">
         <ListItem listStyle="✓">
-          Colors are processed within the Lab color space
+          Colors are processed, and can be adjusted, within the Lab color space
         </ListItem>
         <ListItem listStyle="✓">Punctuation marks are slightly dimmed</ListItem>
         <ListItem listStyle="✓">
@@ -39,6 +36,13 @@ const VSCode = props => (
     />
     <Section>
       <Heading level={2}>Get it</Heading>
+      <Text>
+        The easiest way to get Dainty is to install it through{" "}
+        <Bold>Extensions in Visual Studio Code</Bold>. Search for “dainty”.
+      </Text>
+    </Section>
+    <Section>
+      <Heading level={2}>Build it</Heading>
       <CodeSection>{`git clone https://github.com/alexanderte/dainty-vscode.git
 cd dainty-vscode
 yarn
@@ -46,10 +50,10 @@ yarn
       <Heading level={3}>
         Install theme into your <Code>`settings.json`</Code>
       </Heading>
-      <CodeSection>{`yarn build -i`}</CodeSection>
+      <CodeSection>{`yarn build -i -p <preset>`}</CodeSection>
     </Section>
     <Section>
-      <Heading level={2}>Configuration</Heading>
+      <Heading level={3}>Configuration</Heading>
       <Text>
         Dainty can be configured by editing <Code>`configuration.jsonc`</Code>.
         The file is generated if it doesn’t exist while running{" "}
