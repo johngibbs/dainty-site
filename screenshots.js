@@ -5,6 +5,6 @@ export const screenshots = {
   dracula: "Dracula",
   nightOwl: "Night Owl",
   oneDarkPro: "One Dark Pro",
-  materialThemePalenight: "Palenight",
+  materialThemePalenight: "Material Theme Palenight",
   prettier: "Prettier"
 };
