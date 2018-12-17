@@ -13,12 +13,9 @@ export default class MyApp extends App {
   constructor(props) {
     super(props);
 
-    const hours = new Date().getHours();
-    const isDayTime = hours > 6 && hours < 20;
-
     this.state = {
-      preset: isDayTime ? "daintyLight" : "daintyDark",
-      configuration: isDayTime ? presets.daintyLight : presets.daintyDark,
+      preset: "daintyLight",
+      configuration: presets.daintyLight,
       lightnessStart: 0,
       lightnessEnd: 0,
       chroma: 0
