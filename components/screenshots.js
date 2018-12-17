@@ -1,9 +1,11 @@
 import React from "react";
 import { ColorsContext } from "../colors-context";
-import { Heading, Anchor } from "./core";
+import { Heading, Anchor, Text } from "./core";
+import { Code } from "./code";
 import { List, ListItem } from "./lists";
-import { Section } from "./layout";
+import { Section, Subsection } from "./layout";
 import changeCase from "change-case";
+import { presets } from "dainty-shared/src/presets-web";
 
 export class ScreenshotSection extends React.Component {
   constructor(props) {
@@ -25,31 +27,43 @@ export class ScreenshotSection extends React.Component {
     return (
       <Section>
         <Heading level={2}>Presets</Heading>
-        <List horizontal>
-          {Object.keys(this.props.screenshots).map(s => (
-            <ListItem key={s} horizontal small>
-              <Anchor
-                nav
-                active={this.state.screenshot === s}
-                onClick={() => this.showScreenshot(s)}
-              >
-                {this.props.screenshots[s]}
-              </Anchor>
-            </ListItem>
-          ))}
-        </List>
-        <ScreenshotContainer>
-          {Object.keys(this.props.screenshots).map(s => (
-            <Screenshot
-              key={s}
-              horizontal
-              visible={this.state.screenshot === s}
-              src={`/static/${this.props.application}-${changeCase.paramCase(
-                s
-              )}.png`}
-            />
-          ))}
-        </ScreenshotContainer>
+        {Object.keys(this.props.screenshots).map(s => (
+          <Subsection>
+            <Heading level={3}>
+              {this.props.screenshots[s]} (
+              <Code>`{changeCase.paramCase(s)}`</Code>)
+            </Heading>
+            <ScreenshotContainer>
+              <Screenshot
+                key={s}
+                src={`/static/${this.props.application}-${changeCase.paramCase(
+                  s
+                )}.png`}
+              />
+            </ScreenshotContainer>
+          </Subsection>
+        ))}
+        <Subsection>
+          <Heading level={3}>Additional presets</Heading>
+          <Text small>
+            {Object.keys(presets)
+              .filter(
+                preset => !Object.keys(this.props.screenshots).includes(preset)
+              )
+              .map(preset => (
+                <span
+                  style={{
+                    marginRight: 24,
+                    marginBottom: 12,
+                    display: "inline-block"
+                  }}
+                >
+                  {presets[preset].name} (
+                  <Code>`{changeCase.paramCase(preset)}`</Code>)
+                </span>
+              ))}
+          </Text>
+        </Subsection>
       </Section>
     );
   }
@@ -79,11 +93,7 @@ export const Screenshot = props => (
     <img src={props.src} />
     <style jsx>{`
       img {
-        left: 0;
-        top: 0;
         width: 100%;
-        ${props.first ? "position: relative" : "position: absolute"};
-        ${!props.visible && "opacity: 0"};
       }
 
       @media (min-width: 1024px) {
