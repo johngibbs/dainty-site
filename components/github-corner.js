@@ -61,8 +61,8 @@ export const GitHubCorner = () => (
           }
 
           .github-corner {
-            fill: ${getColor("neutral", getTypeShade(4), 0.75)};
-            color: ${getColor("blue", getTypeShade(36))};
+            fill: ${getColor("neutral", getTypeShade(1), 0.75)};
+            color: ${getColor("blue", getTypeShade(15))};
             position: fixed;
             top: 0;
             border: 0;
@@ -72,8 +72,8 @@ export const GitHubCorner = () => (
           }
 
           .github-corner:hover {
-            fill: ${getColor("neutral", getTypeShade(4))};
-            color: ${getColor("blue", getTypeShade(36))};
+            fill: ${getColor("neutral", getTypeShade(2))};
+            color: ${getColor("blue", getTypeShade(15))};
           }
         `}</style>
       </React.Fragment>
