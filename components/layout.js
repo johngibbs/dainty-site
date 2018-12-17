@@ -66,13 +66,13 @@ export const SiteContainer = props => (
             line-height: 1.875;
           }
 
-          @media (max-width: 1023.98px) {
+          @media (max-width: 1439.98px) {
             div {
               font-size: 16px;
             }
           }
 
-          @media (min-width: 1024px) {
+          @media (min-width: 1440px) {
             div {
               font-size: 17px;
             }
@@ -89,32 +89,33 @@ export const Page = props => (
     <style jsx>{`
       div {
         display: flex;
+        padding: 0 0px;
       }
 
       @media (max-width: 1279.98px) {
         div {
+          flex-direction: column;
           width: 100%;
-          padding: 0 24px;
         }
       }
 
       @media (min-width: 1280px) {
         div {
+          margin-top: 64px;
           width: 1280px;
-          margin: 0 auto;
         }
       }
 
       @media (max-width: 1439.98px) {
         div {
-          flex-direction: column;
-          margin-top: 32px;
+          margin: 32px auto;
+          padding: 0 32px;
         }
       }
 
       @media (min-width: 1440px) {
         div {
-          margin-top: 64px;
+          margin: 64px auto;
         }
       }
 

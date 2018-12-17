@@ -1,43 +1,26 @@
 import React from "react";
 import { ColorsContext } from "../colors-context";
-import { Heading, Anchor, Text } from "./core";
+import { Heading, Text } from "./core";
 import { Code } from "./code";
-import { List, ListItem } from "./lists";
 import { Section, Subsection } from "./layout";
 import changeCase from "change-case";
 import { presets } from "dainty-shared/src/presets-web";
 
 export class ScreenshotSection extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      screenshot: Object.keys(props.screenshots)[0]
-    };
-
-    this.showScreenshot = this.showScreenshot.bind(this);
-  }
-
-  showScreenshot(screenshot) {
-    this.setState({ screenshot });
-    this.props.setPreset(screenshot);
-  }
-
   render() {
     return (
       <Section>
         <Heading level={2}>Presets</Heading>
-        {Object.keys(this.props.screenshots).map(s => (
-          <Subsection>
+        {Object.keys(this.props.screenshots).map(screenshot => (
+          <Subsection key={screenshot}>
             <Heading level={3}>
-              {this.props.screenshots[s]} (
-              <Code>`{changeCase.paramCase(s)}`</Code>)
+              {this.props.screenshots[screenshot]} (
+              <Code>`{changeCase.paramCase(screenshot)}`</Code>)
             </Heading>
             <ScreenshotContainer>
               <Screenshot
-                key={s}
                 src={`/static/${this.props.application}-${changeCase.paramCase(
-                  s
+                  screenshot
                 )}.png`}
               />
             </ScreenshotContainer>
@@ -52,6 +35,7 @@ export class ScreenshotSection extends React.Component {
               )
               .map(preset => (
                 <span
+                  key={preset}
                   style={{
                     marginRight: 24,
                     marginBottom: 12,
