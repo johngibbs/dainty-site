@@ -148,7 +148,7 @@ export const Anchor = props => (
           a {
             color: ${props.nav
               ? props.active
-                ? getColor("neutral", getTypeShade(24, 0))
+                ? getColor("neutral", getTypeShade(15, 0))
                 : getColor("neutral", getTypeShade(10, 8))
               : getColor("blueMoreChroma", getTypeShade(11))};
             cursor: pointer;

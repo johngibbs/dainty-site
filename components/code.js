@@ -86,7 +86,7 @@ export const Code = props => (
             font-size: 87.5%;
             color: ${props.token === "punctuation"
               ? getColor("neutral", getTypeShade(10))
-              : getColor("purple", getTypeShade(33))};
+              : getColor("purple", getTypeShade(13))};
           }
         `}</style>
       </React.Fragment>
