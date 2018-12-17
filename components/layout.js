@@ -101,12 +101,18 @@ export const Page = props => (
 
       @media (min-width: 1280px) {
         div {
-          margin-top: 64px;
           width: 1280px;
         }
       }
 
-      @media (max-width: 1439.98px) {
+      @media (max-width: 767.98px) {
+        div {
+          margin: 16px auto;
+          padding: 0 16px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1439.98px) {
         div {
           margin: 32px auto;
           padding: 0 32px;
