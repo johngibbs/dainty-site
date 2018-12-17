@@ -27,7 +27,7 @@ export const SiteContainer = props => (
             name="description"
             content="Dainty is a color theme generator. Dainty Light and Dainty Dark are the default presets of Dainty. They’re balanced and refined color themes using carefully selected colors within the Lab color space."
           />
-          <meta property="og:title" content="Dainty for Visual Studio" />
+          <meta property="og:title" content="Dainty" />
           <meta
             property="og:description"
             content="Dainty is a color theme generator. Dainty Light and Dainty Dark are the default presets of Dainty. They’re balanced and refined color themes using carefully selected colors within the Lab color space."
