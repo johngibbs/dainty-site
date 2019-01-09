@@ -20,18 +20,6 @@ export const List = props => (
           `padding-left: ${props.listStyle === "✓" ? "22px" : "18px"}`};
         align-items: flex-start;
       }
-
-      @media (max-width: 1023.98px) {
-        ul {
-          ${props.small && "font-size: 15px;"};
-        }
-      }
-
-      @media (min-width: 1024px) {
-        ul {
-          ${props.small && "font-size: 16px;"};
-        }
-      }
     `}</style>
   </React.Fragment>
 );
@@ -70,6 +58,7 @@ export class ListItem extends React.Component {
               li {
                 flex: 0 0 auto;
                 ${this.props.horizontal && "margin-right: 64px"};
+                ${this.props.small && "font-size: 14px"};
               }
 
               li:not(:last-child) {
@@ -91,18 +80,6 @@ export class ListItem extends React.Component {
                     : getColor("neutral", getTypeShade(6))
                 };
               `};
-              }
-
-              @media (max-width: 1023.98px) {
-                li {
-                  ${this.props.small && "font-size: 14px"};
-                }
-              }
-
-              @media (min-width: 1024px) {
-                li {
-                  ${this.props.small && "font-size: 15px"};
-                }
               }
             `}</style>
           </React.Fragment>

@@ -52,8 +52,7 @@ export const CodeSection = props => (
           }
 
           code {
-            font-family: overpass-mono, SFMono-Regular, Consolas,
-              Liberation Mono, Menlo, Courier, monospace;
+            font-family: "IBM Plex Mono", monospace;
             color: ${getColor("purple", getTypeShade(13))};
           }
 
@@ -81,8 +80,7 @@ export const Code = props => (
         <code>{props.children}</code>
         <style jsx>{`
           code {
-            font-family: overpass-mono, SFMono-Regular, Consolas,
-              Liberation Mono, Menlo, Courier, monospace;
+            font-family: "IBM Plex Mono", monospace;
             font-size: 87.5%;
             color: ${props.token === "punctuation"
               ? getColor("neutral", getTypeShade(10))

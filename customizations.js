@@ -3,8 +3,7 @@ export function getCustomizations(getColor, getProperty, getTypeShade) {
 
   return {
     'code[class*="language-"]': {
-      fontFamily:
-        '"overpass-mono", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace',
+      fontFamily: '"IBM Plex Mono", monospace',
       fontSize: 13
     },
     'pre[class*="language-"]': {

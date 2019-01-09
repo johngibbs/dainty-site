@@ -34,8 +34,8 @@ export const SiteContainer = props => (
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <style>{`
-          @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i');
-          @import url('https://overpass-30e2.kxcdn.com/overpass-mono.css');
+          @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,500,500i');
+          @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300');
           @import url('https://csshake.surge.sh/csshake.min.css');
 
           body {
@@ -58,24 +58,11 @@ export const SiteContainer = props => (
         <div>{props.children}</div>
         <style jsx>{`
           div {
-            font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
-              Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-              Segoe UI Symbol;
+            font-family: "IBM Plex Sans", sans-serif;
             color: ${getColor("neutral", getTypeShade(14, 0))};
             font-weight: 300;
             line-height: 1.875;
-          }
-
-          @media (max-width: 1439.98px) {
-            div {
-              font-size: 16px;
-            }
-          }
-
-          @media (min-width: 1440px) {
-            div {
-              font-size: 17px;
-            }
+            font-size: 16px;
           }
         `}</style>
       </React.Fragment>
@@ -282,7 +269,7 @@ export const Content = props => (
       @media (min-width: 1024px) {
         div {
           width: 1024px;
-          margin-top: -8px;
+          margin-top: -5px;
         }
       }
     `}</style>

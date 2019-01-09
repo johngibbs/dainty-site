@@ -7,18 +7,7 @@ export const Text = props => (
     <style jsx>{`
       p {
         margin-bottom: 16px;
-      }
-
-      @media (max-width: 1023.98px) {
-        p {
-          ${props.small && "font-size: 14px"};
-        }
-      }
-
-      @media (min-width: 1024px) {
-        p {
-          ${props.small && "font-size: 15px"};
-        }
+        ${props.small && "font-size: 14px"};
       }
     `}</style>
   </React.Fragment>
@@ -28,16 +17,8 @@ export const Small = props => (
   <React.Fragment>
     <small>{props.children}</small>
     <style jsx>{`
-      @media (max-width: 1023.98px) {
-        small {
-          font-size: 14px;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        small {
-          font-size: 15px;
-        }
+      small {
+        font-size: 14px;
       }
     `}</style>
   </React.Fragment>
@@ -48,7 +29,7 @@ export const Bold = props => (
     <b>{props.children}</b>
     <style jsx>{`
       b {
-        font-weight: 400;
+        font-weight: 500;
       }
     `}</style>
   </React.Fragment>
@@ -101,32 +82,16 @@ export const Heading = props => {
               margin-bottom: 16px;
             }
 
-            @media (max-width: 1023.98px) {
-              h1 {
-                font-size: 30px;
-              }
-
-              h2 {
-                font-size: 22px;
-              }
-
-              h3 {
-                font-size: 16px;
-              }
+            h1 {
+              font-size: 26.79296875px;
             }
 
-            @media (min-width: 1024px) {
-              h1 {
-                font-size: 31px;
-              }
+            h2 {
+              font-size: 22.5625px;
+            }
 
-              h2 {
-                font-size: 23px;
-              }
-
-              h3 {
-                font-size: 17px;
-              }
+            h3 {
+              font-size: 19px;
             }
           `}</style>
         </React.Fragment>
