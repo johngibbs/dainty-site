@@ -142,6 +142,24 @@ const Overview = () => (
               </Td>
               <Td>Chroma to be added or subtracted at end of scales</Td>
             </Tr>
+            <Tr>
+              <Td>
+                <Code>`bezierStart`</Code>
+              </Td>
+              <Td>
+                <Code>`number`</Code>
+              </Td>
+              <Td>Adjustment to start of Bézier curve</Td>
+            </Tr>
+            <Tr>
+              <Td>
+                <Code>`bezierEnd`</Code>
+              </Td>
+              <Td>
+                <Code>`number`</Code>
+              </Td>
+              <Td>Adjustment to end of Bézier curve</Td>
+            </Tr>
           </tbody>
         </Table>
       </Subsection>
