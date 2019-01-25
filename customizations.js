@@ -3,7 +3,7 @@ export function getCustomizations(getColor, getProperty, getTypeShade) {
 
   return {
     'code[class*="language-"]': {
-      fontFamily: '"IBM Plex Mono", monospace',
+      fontFamily: '"Roboto Mono", monospace',
       fontSize: 13
     },
     'pre[class*="language-"]': {

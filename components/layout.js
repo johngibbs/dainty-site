@@ -34,8 +34,8 @@ export const SiteContainer = props => (
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <style>{`
-          @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,500,500i');
-          @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300');
+          @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,500,500i');
+          @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300');
           @import url('https://csshake.surge.sh/csshake.min.css');
 
           body {
@@ -58,7 +58,7 @@ export const SiteContainer = props => (
         <div>{props.children}</div>
         <style jsx>{`
           div {
-            font-family: "IBM Plex Sans", sans-serif;
+            font-family: Roboto, sans-serif;
             color: ${getColor("neutral", getTypeShade(14, 0))};
             font-weight: 300;
             line-height: 1.875;
@@ -146,6 +146,12 @@ export const Subsection = props => (
 export const Sidebar = withRouter(({ router }) => (
   <React.Fragment>
     <div className="sidebar">
+      <Subsection>
+        <img
+          src="/static/logo-icon.svg"
+          style={{ width: 96, position: "relative", left: -16 }}
+        />
+      </Subsection>
       <Subsection>
         <Heading level={3}>Dainty</Heading>
         <List small>
