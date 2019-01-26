@@ -1828,10 +1828,10 @@ cyclist@~0.2.2:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
   integrity sha1-GzN5LhHpFKL9bW7WRHRkRE5fpkA=
 
-dainty-shared@3.1.0-d6b3345:
-  version "3.1.0-d6b3345"
-  resolved "https://registry.yarnpkg.com/dainty-shared/-/dainty-shared-3.1.0-d6b3345.tgz#07bccf15946465eeb3d5b3ae584fefe39bf0feb8"
-  integrity sha512-4jvcHSql55JCTdacj2qgFrkF3ksyGJPZXhZgzK0q+sQCdbeg53C87F3n0FdONBMm6tjnIgnAwFB8/zYZCcifCw==
+dainty-shared@3.1.0-ef33f79:
+  version "3.1.0-ef33f79"
+  resolved "https://registry.yarnpkg.com/dainty-shared/-/dainty-shared-3.1.0-ef33f79.tgz#0fb6dca69a5ed360db8d31c6e1e2ee6afbd1ac94"
+  integrity sha512-kpPhiRA51Mj+SfDoviUnzYACVvMyAbad3fkXH3lfCTywUhJ2gBLuj61cWuzCwhDkpIkU6JgFRg9MOGNgTV3Y0w==
   dependencies:
     ajv "6.5.5"
     appdata-path "1.0.0"
