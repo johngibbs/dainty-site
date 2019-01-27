@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Code, CodeSection } from "../components/code";
 import { Heading, Text, Anchor, Bold } from "../components/core";
-import { List, ListItem } from "../components/lists";
 import { Section } from "../components/layout";
 import { ScreenshotSection } from "../components/screenshots";
 import { screenshots } from "../screenshots";
@@ -16,18 +15,11 @@ const VSCode = props => (
         <Bold>Dainty Dark</Bold> and <Bold>Dainty Light</Bold> as well as{" "}
         <Bold>popular color themes</Bold> as its presets.
       </Text>
-    </Section>
-    <Section>
-      <Heading level={2}>Features</Heading>
-      <List listStyle="✓">
-        <ListItem listStyle="✓">
-          Colors are processed, and can be adjusted, within the Lab color space
-        </ListItem>
-        <ListItem listStyle="✓">Punctuation marks are slightly dimmed</ListItem>
-        <ListItem listStyle="✓">
-          Workbench is less busy than in the default/original themes
-        </ListItem>
-      </List>
+      <Text>
+        Dainty keeps most of the token colors of the original themes, but the
+        workbench and UI elements such as selections and shadows are rebuilt for
+        a <Bold>sleek and minimal appearance</Bold>.
+      </Text>
     </Section>
     <ScreenshotSection
       screenshots={screenshots}
