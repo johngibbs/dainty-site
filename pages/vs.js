@@ -53,6 +53,8 @@ const VS = props => (
           </Anchor>
           &nbsp;extension
         </ListItem>
+        <ListItem listStyle="–">Node.js</ListItem>
+        <ListItem listStyle="–">Yarn</ListItem>
       </List>
     </Section>
     {/* <Section>
